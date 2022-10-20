@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ===用来比较两边的值与类型是否全等，如果全等的话，则为true,不全等的话则为false。
+      // === is used to compare whether the values ​​and types on both sides are congruent.
+      // If they are congruent, it will be true, and if they are not congruent, it will be false.
+      console.log(1 === '1');
+      console.log(0 === '');
+      console.log(1 === true);
+      console.log(true === false);
+      console.log(0 === null);
+      console.log(0 === Number(null));
+      console.log(a === a);
+
+      // !== 用来比较两边值与类型是否不全等，如果是不全等的话，则返回true,全等则返回false。
+      // !== is used to compare whether the values ​​and types on both sides are not congruent.
+      // If they are not congruent, return true, and if they are congruent, return false.
+      console.log(1 !== '1');
+      console.log(0 !== '');
+      console.log(1 !== true);
+      console.log(true !== false);
+      console.log(0 !== null);
+      console.log(0 !== Number(null));
+      console.log(a !== a);
+
+      // Special case:
+      undefined == null; // true
+      undefined === null; // false
+
+      NaN == NaN; // false
+      NaN === NaN; // false
+
+      NaN !== NaN; // true
+      NaN != NaN; // true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在执行前，会在sum函数体内声明两个变量a和b，用来接收传过来的实参1和2。
+      // Before execution, two variables A and b are declared in the body of the sum function to receive the passed arguments 1 and 2.
+      function sum1() {
+        var a = 1;
+        var b = 2;
+        console.log(a + b);
+      }
+
+      // 实参少于形参的时候，就会输出undefined
+      // When there are fewer arguments than parameters, undefined is printed
+      function sum2(a, b) {
+        console.log(a);
+        console.log(b);
+        console.log(a + b);
+      }
+      sum2(2);
+    </script>
+  </body>
+</html>

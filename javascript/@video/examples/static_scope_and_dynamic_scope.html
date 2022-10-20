@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      var a = 3;
+      var b = 4;
+      function fn(a) {
+        function fn2(b) {
+          fn3(b);
+          fn3();
+        }
+        function fn3(b) {
+          console.log(b); // 4 undefined
+        }
+        fn2(b);
+      }
+      fn(a);
+
+      // // 2
+      var c = 3;
+      var d = 4;
+      function fn(c) {
+        function fn2(d) {
+          var d = 2;
+          console.log(c); // 3
+          fn3(d);
+          fn3();
+          fn4();
+        }
+        function fn3(d) {
+          console.log(d); // 2 undefined
+        }
+        function fn4() {
+          console.log(d); // 4
+        }
+        fn2(d);
+      }
+      fn(c);
+
+      // 3
+      var e = 3;
+      var f = 4;
+      function fn() {
+        var f = 2;
+        fn2(f);
+      }
+      function fn2(f) {
+        console.log(f); // 2
+      }
+      fn();
+
+      // 4
+      var g = 3;
+      var h = 4;
+      function fn() {
+        var h = 2;
+        fn2();
+      }
+      function fn2() {
+        console.log(h); // undefined
+      }
+      fn();
+
+      // 5
+      var x = 1;
+      var y = 3;
+      var z = 2;
+      function fn(x) {
+        var y = 5;
+        console.log(x, y); // 1,5
+        function fn2(y) {
+          var c = 4;
+          console.log(x); // 1
+          console.log(y); // 2
+          console.log(z); // 2
+        }
+        fn2(z);
+      }
+      fn(x);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      A && B，表示 A 和 B 两个都要满足条件（即都为真）才行。
+      所以只要 A 为假，就不满足条件了，所以就没必要再看 B 了，直接把 A 的结果返回就好
+      如果 A 为满足条件（为真），肯定要看下 B 是不是满足条件
+      如果 B 不满足条（为假），那最后结果只能是假了，所以将 B 的结果返回
+      如果 B 满足条件（为真），那最后结果是真，也将 B 的结果返回。
+      */
+
+      /*
+      A && B means that both A and B must satisfy the condition (that is, both are true).
+      So as long as A is false, the condition is not satisfied, so there is no need to look at B again, just return the result of A directly
+      If A satisfies the condition (true), we must see if B satisfies the condition
+      If B does not satisfy the condition (is false), then the final result can only be false, so return the result of B
+      If B satisfies the condition (true), then the final result is true, and the result of B is also returned.
+      */
+
+      console.log(false && true); // false
+      console.log(true && false); // false
+      console.log(true && true); // true
+
+      // 两操作数都非表达式
+      //Both operands are not expressions
+      1 && 2; // 2
+      0 && 3; // 0
+      '' && 1; // ''
+      undefined && NaN; // undefined
+
+      // 两操作数至少有一个是表达式
+      //At least one of the two operands is an expression
+      true && alert('Hello World'); // alert('Hello World')
+      false && alert('Hello World'); // false
+      2 + 3 && 4 + 5; // 9
+      3 - 3 && 1; // 0
+    </script>
+  </body>
+</html>

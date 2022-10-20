@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在全局作用域中，是没有办法访问到函数作用域中的变量（局部变量），（闭包除外）。
+      // In the global scope, there is no way to access variables (local variables) in the scope of a function (except for closures).
+      var a = 2; // Global scope
+      function fn() {
+        var b = 3; // Function scope
+      }
+      // 全局作用域是不能访问函数作用域中的变量
+      // A global scope is a variable that cannot be accessed within the scope of a function
+      console.log(b); // Uncaught ReferenceError: b is not defined
+
+      // 在函数作用域中，可以访问全局作用域中的变量（全局变量）
+      // In function scope, variables in global scope can be accessed (global variables)
+      var a = 2; // Global scope
+      function fn() {
+        var b = 3; // function scope
+        console.log(a); // 2
+      }
+      fn();
+    </script>
+  </body>
+</html>

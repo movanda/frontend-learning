@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      break	          在循环语句中使用，结束当前循环体（如 for循环，while循环）
+      continue	      在循环语句中使用，跳出本次循环，继续执行下一次循环（如：for循环，while循环）
+      return	        return关键 字，只能出现在函数体中
+                      不仅能退出循环，退出函数体，还能将return语句中的值返回，其返回值为函数返回值
+    */
+
+      /*
+      Break is used in a loop statement to end the body of the loop (e.g., a for loop, a while loop)
+      Continue is used in a loop statement to exit the loop and proceed to the next loop (e.g., for, while).
+      Return which can only appear in the body of a function Not only can you exit the loop and the body of the function, but you can also return the value in the return statement, which is the return value of the function
+      */
+
+      // [return] can exit not only the loop, but also the body of the function
+      function fn() {
+        for (var i = 0; i < 10; i++) {
+          if (i == 3) {
+            return;
+          }
+          console.log(i);
+        }
+        console.log('break continue');
+      }
+      fn(); // 0,1,2
+    </script>
+  </body>
+</html>

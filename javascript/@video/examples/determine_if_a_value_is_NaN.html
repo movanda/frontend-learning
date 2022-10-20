@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // NaN 是一个不是数字的数字类型，利用这个特性来判断。
+      // NaN is a numeric type that is not a number, use this feature to determine.
+      var a = NaN;
+      var _isNaN = isNaN(a) && typeof a === 'number';
+      console.log(_isNaN); // true
+
+      // NaN!=NaN，利用这个特性来判断。
+      // NaN!=NaN, use this feature to judge.
+      function isNaN(n) {
+        if (n !== n) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isNaN(NaN)); // true   ∵ NaN!=NaN
+    </script>
+  </body>
+</html>

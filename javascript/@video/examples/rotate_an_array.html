@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Rotate the array [1, 3, 5, 7, 9, 11, 13] by K steps
+
+      // Method 1
+      /**
+       * @description Rotate the array by k steps
+       * @param arr Rotates the array
+       * @param k Number of rotation steps
+       */
+
+      function rotateArr(arr, k) {
+        var len = arr.length;
+        if (len === 0 || !k) return arr;
+        var steps = Math.abs(k % len >> 0);
+        for (var i = 0; i < steps; i++) {
+          var value = arr.pop();
+          arr.unshift(value);
+        }
+      }
+      var arr = [1, 3, 5, 7, 9, 11, 13];
+      rotateArr(arr, 3);
+      console.log(arr); // [9,11,13,1,3,5,7]
+
+      // Method 2
+      function rotateArr2(arr, k) {
+        var len = arr.length;
+        if (len === 0 || !k) return arr;
+        var steps = Math.abs(k % len >> 0);
+        var item1 = arr.slice(-steps);
+        var item2 = arr.slice(0, len - steps);
+        return item1.concat(item2);
+      }
+      var arr = [1, 3, 5, 7, 9, 11, 13];
+      var arr2 = rotateArr2(arr, 3);
+      console.log(arr2); // [9,11,13,1,3,5,7]
+
+      /**
+       * Time complexity and space complexity of method 1&2
+       * Method 1 ： Time complexity → O(n²)   space complexity → O(1)
+       * Method 2 ： Time complexity → O(1)    space complexity → O(n)
+       *
+       * ∵ In the front-end, time is more important than space
+       * ∴ Method 2 > Method 1
+       */
+    </script>
+  </body>
+</html>

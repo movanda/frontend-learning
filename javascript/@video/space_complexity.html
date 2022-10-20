@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // O(1)
+      // 输入量增大，并不会影响所需要的空间，不管arr多长，则变量a,b对应空间相对稳定
+      // 例如：[1,2,3,4][1,2,3,....100]
+      // If the input quantity increases, the space required will not be affected. No matter how long ARR is,
+      // the corresponding space of variables A and B is relatively stable. For example: [1,2,3,4][1,2,3,....100]
+      function fn(arr) {
+        var a = arr[1];
+        var b = arr[2];
+      }
+
+      // O(n)
+      // 数组arr的输入量变大，其对应arr2占用的内存也就相应变大。
+      // As the input size of array ARR increases, the memory used by ARR2 will also increase.
+      function fn(arr) {
+        var arr2 = arr;
+      }
+
+      // O(n2)级别- 空间复杂度
+      // 输入量增大，其所需要的内存空间为原来的平方。
+      // 当输入n为2时，所需要的空间为原来的4倍，当输入为7时，所需空间为原来的49倍。
+      // The input size is increased, and the required memory space is equal to the original square.
+      // When the input n is 2, the space required is 4 times the original, and when the input is 7, the space required is 49 times the original.
+      function fn(n) {
+        var arr = [];
+        for (var i = 0; i < n; i++) {
+          var arr2 = [];
+          for (var j = 0; j < n; j++) {
+            arr2[j] = j;
+            arr[i] = arr2;
+          }
+        }
+        console.log(arr);
+      }
+      fn(7);
+    </script>
+  </body>
+</html>

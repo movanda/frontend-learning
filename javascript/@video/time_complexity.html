@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // O(1)
+      // 只要是我们能够识别出来的一个计算量，同时和输入量多少没有关系，那他复杂度就是O(1)
+      // If it's a computation that we can identify, regardless of the input, it's order one.
+      function fn(arr) {
+        console.log(arr[0] + arr[1]);
+        console.log(arr[3]);
+      }
+
+      // 时间复杂度 O(n)级别
+      // 执行次数受输入量的影响，例如arr数组长度为10，执行10次，长度为100，执行100次，长度为10000，执行10000次
+      // The number of executions is affected by the amount of input.
+      // For example, an ARR array of length 10 is executed 10 times, length 100 is executed 100 times, length 10000 is executed 10000 times
+      function fn(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+          console.log(arr[i] + 10);
+        }
+      }
+
+      // O(n*logn)
+      var arr = [1, 2, 3, 4, 5, 6, 7];
+      for (var i = 0; i < arr.length; i++) {
+        for (j = i; j > 1; j /= 2) {
+          console.log('二分');
+        }
+      }
+
+      // O(n2)级别-时间复杂度
+      // 执行次数（计算量）是输入量的平方，例如输入量是10，执行100次，输入100，执行10000次。
+      // The number of executions (computations) is the square of the input quantity.
+      // For example, if the input quantity is 10, execute 100 times, enter 100, execute 10,000 times.
+      function fn(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          for (var j = 0; j < arr.length; j++) {
+            console.log(arr[i]);
+          }
+        }
+      }
+
+      // 当n的取值足够大时，其算法耗时时间从小到大依次为：
+      // when the value of n is large enough, the algorithm time from small to large is:
+
+      // O(1) < O(logn) < O(n) < O(n*logn) < O(n2)
+    </script>
+  </body>
+</html>

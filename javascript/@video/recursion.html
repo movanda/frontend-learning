@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 递归：可以简单理解为一个函数的内部语句调用这个函数自身，一次一次的重复调用自身。直到函数执行到某一次时，因达到某种条件而终止了对自己的调用，然后返回最终结果。
+      // Recursion: This is simply a function in which an internal statement calls itself, over and over again.
+      // Until the function reaches a point where it terminates the call to itself because some condition has been met, and then returns the final result.
+
+      // Q：Find n factorial
+      // n! = n * (n-1)!
+      function factorial(n) {
+        // 递归的出口，当n=1时，返回1
+        // The exit of the recursion, returns 1 when n=1
+        if (n == 1) return 1;
+        // 如果询问的不是1的阶乘，就返回 n * (n-1)
+        // Return n * (n-1) if asked for a factorial other than 1.
+        return n * factorial(n - 1);
+
+        // 三元运算符
+        // Ternary Operator
+        // return n == 1 ? 1 : n * factorial(n - 1);
+      }
+
+      var result = factorial(5);
+      console.log(result);
+    </script>
+  </body>
+</html>

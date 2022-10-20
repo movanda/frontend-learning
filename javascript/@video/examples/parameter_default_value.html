@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Q1：计算任意两个数字之间的所有数之和
+      // Calculate the sum of all the numbers between any two numbers
+      function addition(a, b) {
+        // 判断输入的是否是数字类型，如果不是则输出0，如果是则运行以下代码。
+        // Determine if the input is a numeric type. If not, output 0. If yes, run the following code.
+        a = typeof a === 'number' && !isNaN(a) ? a : 0; // true:a  false:0
+        b = typeof b === 'number' && !isNaN(b) ? b : 0; // true:b  false:0
+        var sum = 0;
+        if (a <= b) {
+          for (var i = a; i <= b; i++) {
+            sum += i;
+          }
+        } else {
+          for (var i = b; i <= a; i++) {
+            sum += i;
+          }
+        }
+        console.log(sum);
+      }
+      addition(3, 5); // 12
+      addition(-1, 2); // 2
+      addition(5, 3); // 12
+      addition('a', 'b'); // 0
+
+      // Q2：判断用户输入的用户名是否符合要求
+      // Check whether the entered user name meets requirements
+      // <4   >=4<=8   >8
+      function userMatch(userName) {
+        var len = userName.length;
+        if (len < 4) {
+          alert('Too short.');
+        } else if (len <= 8) {
+          alert('Allowed');
+        } else {
+          alert('Too long.');
+        }
+      }
+      // var userName = prompt('user name');
+      var userName = 'Hello World'; // Too long
+      var userName = '18'; // Too short
+      var userName = 'apple'; // Allowed
+      userMatch(userName);
+    </script>
+  </body>
+</html>

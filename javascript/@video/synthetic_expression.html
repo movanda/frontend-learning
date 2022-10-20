@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // POINT
+      // 如果操作符优先级一样，则从左往右算
+      // 可以用()来改变优先级,改变计算顺序
+
+      // 操作符的优先级，从上往下，优先级从高到低，如下：
+      // ++ 和 -- 运算符
+      // 非运算符（！）
+      // 算术运算符( %、/、* 、+、-)
+      // 关系运算符（>、<、>=、<=、== 、!=、===、!==)
+      // 逻辑运算符（&& 、||）
+      // 赋值运算符（=、+=、-=、/=、%=）
+
+      // POINT
+      // If the operator precedence is the same, it will be counted from left to right
+      // You can use () to change the priority and change the calculation order
+
+      // The priority of the operator, from top to bottom, from high to low, is as follows:
+      // ++ and --operators
+      // NOT operator (!)
+      // Arithmetic operators (%, /, *, +, -)
+      // Relational operators (>, <, >=, <=, ==, !=, ===, !==)
+      // Logical operators (&&, ||)
+      // assignment operators (=, +=, -=, /=, %=)
+
+      var a = 0,
+        c;
+      c = !3 + 4 / 2 > 5 && ++a; // false && ++a
+      console.log(c, a); // false 0
+    </script>
+  </body>
+</html>

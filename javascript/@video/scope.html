@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // JavaScript中有3种类型作用域：全局作用域、函数作用域、块级作用域（ES6中新增）
+      // JavaScript has three types of scope: global scope, function scope, block scope (new in ES6)
+
+      // 全局作用域：
+      // 直接编写在<script>标签中的JS代码或单独的JS文件中的代码都是在全局作用域
+      // 全局作用域在页面打开时创建，在页面关闭时销毁。
+      // 声明在全局作用域中的变量为全局变量
+      // Global scope:
+      // JS code written directly in the <script> tag or in a separate JS file is in global scope
+      // The global scope is created when the page is open and destroyed when the page is closed.
+      // Declare variables in global scope as global variables
+
+      // 函数作用域：
+      // 函数作用域，也称为局部作用域，所有写在函数内部的代码，就是在函数作用域中。
+      // 函数被调用时创建函数作用域，函数执行完毕后，函数作用域被销毁（切断引用）
+      // 声明在函数作用域中的变量为局部变量
+      // Function scope:
+      // Function scope, also known as local scope, all code written inside a function is in function scope.
+      // The function scope is created when the function is called, and is destroyed when the function is executed.
+      // Declare variables in the scope of a function as local variables
+
+      var a = 2; // → the global variable
+      // function fn → global variable
+      function fn() {
+        // function scope ↓
+        var b = 3;
+        var c = 2; // b c → local variable
+      }
+    </script>
+  </body>
+</html>

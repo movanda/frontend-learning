@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在严格模式下：
+      // 变量必需先声明，再使用（声明变量用var,const,let)
+      // 禁止使用with
+
+      // In strict mode:
+      // Variables must be declared before they are used (var,const,let)
+      // Do not use with
+
+      'use strict';
+      function fn(a = 2) {
+        a = 9;
+        console.log(a);
+      }
+      fn(); // 9
+      // After the function is called, the A global variable is created.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // A || B，表示 A 或 B 中只有一个满足条件就可以
+      // 所以只要 A 为真，就满足条件了，所以就没必要再看 B 了，所以就把 A 的结果返回
+      // 如果 A 不满足条件，那肯定要看下 B 是否满足条件
+      // 如果 B 满足条件（为真），那最后肯定是真了，所以把 B 的结果返回
+      // 如果 B 不满足条件（为假），那最后肯定是假了，所以把 B 的结果返回。
+
+      // A || B, which means that only one of A or B satisfies the condition
+      // So as long as A is true, the condition is satisfied, so there is no need to look at B, so the result of A is returned
+      // If A does not satisfy the condition, then it must be checked whether B satisfies the condition
+      // If B satisfies the condition (true), it must be true in the end, so return the result of B
+      // If B does not satisfy the condition (is false), it must be false in the end, so return the result of B.
+
+      // 两操作数都是布尔值
+      // Both operands are booleans
+      true || true; // true
+      true || false; // true
+      false || true; // true
+      false || false; // false
+
+      // 两操作数都非表达式
+      // Both operands are not expressions
+      1 || 2; // 1
+      0 || 3; // 3
+      '' || 1; // 1
+      undefined || NaN; // NaN
+      true || alert('hello world'); // true
+      false || alert('hello world'); // hello world
+    </script>
+  </body>
+</html>

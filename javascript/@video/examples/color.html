@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color</title>
+  </head>
+  <body>
+    <script>
+      // random rgb color
+      var r1 = Math.floor(Math.random() * 256);
+      var g1 = Math.floor(Math.random() * 256);
+      var b1 = Math.floor(Math.random() * 256);
+      var rgb1 = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+      console.log(rgb1);
+
+      // rgb to 16 radix
+      var rgb2 = 'rgb(2,33,55)';
+      var rgbArr = rgb2.split(/[^\d]+/);
+      console.log(rgbArr);
+      var r2 = rgbArr[1];
+      var g2 = rgbArr[2];
+      var b2 = rgbArr[3];
+      var color = (r2 << 16) | (g2 << 8) | b2;
+      var _color = color.toString(16);
+      var _color = '#' + _color.padStart(6, '0');
+      console.log(_color);
+
+      // 16 radix to rgb
+      var newHex = '#02233b';
+      newHex = newHex.replace('#', '0x');
+      var r3 = newHex >> 16;
+      var g3 = (newHex >> 8) & 0xff;
+      var b3 = newHex & 0xff;
+      var rgb3 = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+      console.log(rgb3);
+    </script>
+  </body>
+</html>

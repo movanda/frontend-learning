@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // isNaN() 判断是否不是数值
+      // 不是数值：true，是数值：false
+      // isNaN() determines whether it is not a value
+      // is not the value: true, is the value: false
+      console.log(isNaN(1)); // false
+      console.log(isNaN('1')); // false
+      console.log(isNaN('我')); // true
+      console.log(isNaN(NaN)); // true  ∵ NaN is a numeric type, not a number
+      console.log(isNaN(Infinity)); // false
+    </script>
+  </body>
+</html>

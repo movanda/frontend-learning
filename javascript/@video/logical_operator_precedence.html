@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 逻辑操作符优先级是： ！ --> &&  --> ||  （顺序从左到右，意为优先级从高到低）
+      // The logical operator precedence is:
+      // ! --> && --> ||  (order from left to right, means high to low priority)
+      console.log((1 && false) || (4 && 5)); // 5
+      console.log((1 && 2) || (4 && 5)); // 2
+      console.log((1 && true) || (!'' && 2)); // true
+    </script>
+  </body>
+</html>

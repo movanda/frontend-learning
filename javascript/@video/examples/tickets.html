@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amusement Park Tickets</title>
+  </head>
+  <body>
+    <script>
+      // Calculating Amusement Park Tickets
+      // 1. week → age
+      var week = prompt('Please enter the day of the week.');
+      var age = prompt('Please enter your age.');
+
+      if (week == 0 || week == 6) {
+        if (age > 12) {
+          alert('Adult fares on weekends are' + ' ' + 200);
+        } else {
+          alert('Child fares on weekends are' + ' ' + 150);
+        }
+      } else {
+        if (age > 12) {
+          alert('Adult fares on weekdays are' + ' ' + 100);
+        } else {
+          alert('Child fares on weekdays are' + ' ' + 50);
+        }
+      }
+
+      // 2. age → week
+      if (age > 12) {
+        if (week == 0 || week == 6) {
+          alert('Adult fares on weekends are' + ' ' + 200);
+        } else {
+          alert('Adult fares on weekdays are' + ' ' + 100);
+        }
+      } else {
+        if (week == 0 || week == 6) {
+          alert('Child fares on weekends are' + ' ' + 150);
+        } else {
+          alert('Child fares on weekdays are' + ' ' + 50);
+        }
+      }
+    </script>
+  </body>
+</html>

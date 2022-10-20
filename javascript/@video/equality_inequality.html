@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 用来比较操作符两边值（隐式转换后）是否相等，在比较时，只会比较两边的值而不会比较两边值的类型。
+      //【==】 is used to compare whether the values ​​on both sides are equal after the implicit conversion of the operator.
+      // When comparing, only the values ​​on both sides will be compared and the types of the values ​​on both sides will not be compared.
+
+      console.log(1 == true);
+      console.log(0 == '');
+      console.log('' == false);
+      // Special case:
+      console.log(null == undefined);
+
+      // !=是用来比较两个值（隐式转换后）是否不相等，如果相等返回false，如果不相等返回true。
+      // != is used to compare whether two values ​​(after implicit conversion) are not equal.
+      // If they are equal, return false. If they are not equal, return true.
+      console.log(1 != '');
+      console.log(1 != '1');
+      console.log(0 != '');
+    </script>
+  </body>
+</html>

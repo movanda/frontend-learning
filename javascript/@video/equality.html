@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 赋值运算符：会将等号右边的数值，赋值给等号左边的变量。
+      // 等号左边一定是变量，等号右边可以是字面量，也可以是变量。
+      /* Assignment operator: Assigns the value on the right side of the equal sign to the variable on the left side of the equal sign.
+          The left side of the equal sign must be a variable, and the right side of the equal sign can be a literal or a variable. */
+      var d = 5;
+      var e = 2 + 4 / 2;
+      console.log(d, e);
+
+      // 赋值运算也会产生值
+      // The assignment operation also yields a value
+      var w;
+      console.log((w = 4));
+
+      // 这就意味着，可以连续使用赋值运算符。
+      // This means that assignment operators can be used consecutively.
+      var f, g, h;
+      f = g = h = 12 + 2;
+      console.log(f, g, h);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Q: 找出数组[200,500,900,1200,1500]中比600大的第一个值出现的位置，并将其返回。
+      // Q: Find the position in the array [200,500,900,1200,1500] where the first value greater than 600 occurs and return it.
+      function maxIndex(arr, number) {
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] > number) return i;
+        }
+      }
+      var arr = [200, 500, 900, 1200, 1500];
+      var _index = maxIndex(arr, 600);
+      console.log(_index); // 2
+    </script>
+  </body>
+</html>

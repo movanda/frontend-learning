@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 如果实参的个数小于形参，那函数在调用后则会报错，或得不到想要的结果。那有没有办法可以规避这种问题呢 ？
+      /*
+      在函数声明时，我们可以给形参赋值，这个值我们称为参数的默认值
+      如果在函数调用时，没有传入对应的实参，则参数值就以默认值代替
+      如果传入了对应的实参，参数值就以实参传过来的值为准。
+      */
+
+      // If the number of arguments is smaller than the number of parameters, the function will report an error or not get the desired result after the call.Is there a way around this?
+      /*
+      When a function is declared, we can assign a value to a parameter, which we call the default value of the parameter
+      If no corresponding argument is passed during the function call, the parameter value is replaced by the default value
+      If a corresponding argument is passed in, the value of the argument is the one passed in.
+      */
+
+      // 1
+      // parameters a and b are initialized
+      function fn1(a = 0, b = 0) {
+        console.log(a + b);
+      }
+      fn1(); // 0
+      fn1(1); // 1
+      fn1(1, 2); // 3
+
+      // 2
+      function fn2(a = 0, b) {
+        console.log(a + b);
+      }
+      fn2(); // NaN  a=0, b=undefined, a+b=NaN.
+      fn2(1); // NaN a=1, b=undefined, a+b=NaN.
+      // fn2(, 2);  // x
+
+      // 3
+      function fn3(a, b = 0) {
+        console.log(a + b);
+      }
+      fn3(); // NaN  a=0, b=undefined, a+b=NaN.
+      fn3(1); // 1   a=1, b=0, a+b=1.
+
+      // 参数默认值的另一种书写方式(case by case)
+      // another way to write parameter default values
+      function fn4(a, b) {
+        // 形参a,b如果没有值，则默认为undefined，undefined转boolean是false
+        // The parameters A and b default to undefined if they have no value, and undefined turns Boolean to false
+        a = a || 0; // If A has a value, it's the value of A, and if it doesn't, it's 0
+        b = b || 0; // If B has a value, it's the value of B, and if it doesn't, it's 0
+        console.log(a + b);
+      }
+      fn4(); // 0
+      fn4(1, 2); // 3
+      fn4(2); // 2
+      // fn4(, 2);  // x
+
+      // POINT:
+      // 形参，在函数内部不需要用var声明，直接使用就可以。
+      // Parameters, which do not need to be declared with VAR inside the function, can be used directly.
+    </script>
+  </body>
+</html>

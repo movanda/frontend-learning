@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Compare numbers with numbers
+      console.log(1 > 2);
+      console.log(2 > 1);
+      console.log(2 >= 1);
+
+      // Compare numbers with non-numbers
+      console.log(1 > true);
+      console.log(1 > '2');
+      console.log(1 <= 'a');
+
+      // Compare strings to booleans
+      console.log('' <= false);
+
+      // compare null and undefined to numbers
+      console.log(null >= 0);
+      console.log(undefined <= 0);
+
+      // Compare strings with null and undefined
+      console.log('' >= null);
+      console.log('' <= undefined);
+
+      // Compare null with undefined
+      console.log(null >= undefined);
+
+      // When both sides are strings, the operands are not converted to numbers for comparison.
+      console.log('1' < '1');
+
+      // compare string to string
+      // Unicode： A~Z： 65~90  a~z： 97~122  0-9： 48-57
+      console.log('abc' < 'b');
+      console.log('11' < '5');
+      console.log('abc' < 'acd');
+    </script>
+  </body>
+</html>

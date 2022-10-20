@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fn1(a, b) {
+        return a + b; // The result after return is the function return value
+      }
+      var x = fn1(2, 5); // Return needs a variable to receive the return value
+      console.log(x); // 7
+
+      // return 后面只能返回1个值，如果多个值，则以最后一个为准。
+      // Only one value can be returned after [return]. If there are more than one value, the last value is used.
+      function fn2() {
+        return 1, 'A', [1, 2, 3];
+      }
+      console.log(fn2()); // [1,2,3]
+
+      // 函数里没有【return】或【return;】 ，则函数的返回值是undefined;
+      // There is no [return] or [return;] in the function., the return value of the function is undefined;
+      function fn3(a, b) {
+        console.log('a,b,c');
+      }
+      console.log(fn3()); // undefined
+
+      // POINT
+      /*
+      函数中return语句之后的内容，是不会被执行的
+      return相当于立即退出函数
+      return只能出现在函数体中
+      */
+
+      /*
+      Anything after the return statement in a function is not executed
+      Return is equivalent to exiting the function immediately
+      Return can only appear in the body of a function
+      */
+      function fn4() {
+        console.log('before return');
+        return '';
+        console.log('after return');
+      }
+      fn4(); // before return
+    </script>
+  </body>
+</html>

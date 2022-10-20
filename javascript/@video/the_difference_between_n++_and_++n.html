@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // POINT:
+      // ++a 是先自增再赋值
+      // ++a is incremented first and then assigned
+      // a++ 是先赋值再自增
+      // a++ is first assigned and then incremented
+      var a3 = 1;
+      var b3 = a3++;
+      console.log(b3, a3);
+
+      var a4 = 1;
+      var b4 = ++a4;
+      console.log(b4, a4);
+
+      var b5 = 3;
+      var c5 = ++b5;
+      console.log(c5);
+      console.log(b5);
+      console.log(c5++);
+      console.log(++c5);
+    </script>
+  </body>
+</html>

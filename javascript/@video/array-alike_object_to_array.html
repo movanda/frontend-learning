@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      想要类数组拥有数组的相关方法，则可以把类数组转换为数组再操作。类数组转换为数组的几种方法：
+      - for循环遍历
+      - 使用数组的 slice() 和 concat() 方法
+      - Array.from
+      - Array.apply
+      */
+
+      /*
+      If we want the array-alike object to have the methods related to the array, we can convert the object to an array and then operate on it.
+      There are several ways to convert a class array to an array:
+      - for
+      - slice() and concat() methods of arrays
+      - Array.from
+      - Array.apply
+      */
+
+      // for
+      function fn1() {
+        var arr = [];
+        for (var i = 0; i < arguments.length; i++) {
+          arr[arr.length] += arguments[i];
+        }
+        console.log(arguments); // {1, [2, 3], null, 'q', 10, -6}
+      }
+      fn1(1, [2, 3], null, 'q', 10, -6);
+
+      //  POINT
+      function fn2(a = 2, b = 1) {
+        console.log(a, b);
+        console.log(arguments);
+      }
+      // 只认实参。当没有实参的时候，也不会认形参的a = 2, b = 1。
+      // Accept only arguments.When there is no argument, the a = 2, b = 1 parameter is not recognized.
+      fn2();
+      fn2(1, 2);
+
+      /* NOT YET ↓
+      // slice() and concat() methods
+      function fn() {
+        // 把arguments中元素遍历后放到一个新数组中，换成后将新数组返回。
+        // Put Arguments elements into a new array after traversing, then return the new array when replaced.
+        var arr = Array.prototype.slice.call(arguments);
+        // var arr = Array.prototype.concat.apply([], arguments);
+        arr.push('A');
+        console.log(arr);
+        console.log(arguments);
+      }
+      fn(1, 2, 3);
+
+      // Array.from  Array.apply
+      var obj = {
+        length: 2,
+        0: 1,
+        1: 2,
+      };
+      // var arr = Array.from(obj);
+      var arr = Array.apply(null, obj);
+      arr.push('A');
+      console.log(arr);
+      */
+    </script>
+  </body>
+</html>

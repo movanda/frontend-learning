@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 变量提升
+      // 是指使用var关键字声明的变量会被提升到当前作用域的最顶部
+      // 变量提升提升的是变量，变量提升后，变量的默认值是undefined
+      // Variable promotion
+      // means that variables declared with the var keyword are promoted to the top of the current scope
+      // Variable promotion is the variable, variable promotion, the default value of the variable is undefined
+
+      // 函数提升
+      // 是指使用函数声明创建的函数，它也会被提升到当前作用域的最前面
+      // 这里要区分函数声明和函数表达式
+      // Function promotion
+      // is a function created using a function declaration that is also promoted to the top of the current scope
+      // Distinguish between function declarations and function expressions
+
+      console.log(x); // undefined
+      fn();
+      var x = 2;
+      console.log(x); // 2
+      function fn() {
+        console.log(x); // undefined
+      }
+      fn(); // 2
+
+      // POINT
+      // 区分函数声明与函数表达式
+      // Distinguish between function declarations and function expressions
+      console.log(a);
+      console.log(b);
+      b();
+      a();
+      var a = function () {
+        console.log('hello world');
+      };
+      function b() {
+        console.log('work hard and play hard');
+      }
+
+      // 把var和function声明的函数提升到当前作用域最前面
+      // Elevate the functions declared by var and function to the top of the current scope
+      var a;
+      function b() {
+        console.log('work hard and play hard');
+      }
+      console.log(a);
+      console.log(b);
+      b();
+      a();
+      a = function () {
+        console.log('hello world');
+      };
+    </script>
+  </body>
+</html>

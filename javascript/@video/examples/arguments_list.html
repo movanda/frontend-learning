@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Q：用户传几个数字，就求这几个数字的和
+      // Q: The user sends a few numbers, and we take the sum of these numbers.
+      function addition() {
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        console.log(sum); // 10
+      }
+      addition(1, 2, 3, 10, -6);
+    </script>
+  </body>
+</html>
+the_multiplication_table

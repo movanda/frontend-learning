@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * @description
+       * Determines whether the "{} [] ()" in a string matches properly
+       */
+
+      function matchBracket(str) {
+        str = str + '';
+        var len = str.length;
+        if (len === 0) return true;
+        var stack = [];
+        var leftSymbols = '{[(';
+        var rightSymbols = ')]}';
+        for (var i = 0; i < len; i++) {
+          var s = str[i];
+          if (leftSymbols.includes(s)) {
+            stack.push(s);
+          } else if (rightSymbols.includes(s)) {
+            var stackTop = stack[stack.length - 1];
+            if (isMatch(stackTop, s)) {
+              stack.pop();
+            } else {
+              return false;
+            }
+          }
+        }
+        return stack.length === 0;
+      }
+      function isMatch(left, right) {
+        if (left === '{' && right === '}') return true;
+        if (left === '[' && right === ']') return true;
+        if (left === '(' && right === ')') return true;
+        return false;
+      }
+
+      var str = 'a{(b{c[1,2,3]})}';
+      var bool = matchBracket(str);
+      console.log(bool); // true
+    </script>
+  </body>
+</html>

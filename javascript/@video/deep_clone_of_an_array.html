@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function deepClone(arr) {
+        if (!Array.isArray(arr)) return;
+        var arr2 = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (Array.isArray(arr[i])) {
+            arr2.push(deepClone(arr[i]));
+          } else {
+            arr2.push(arr[i]);
+          }
+        }
+        return arr2;
+      }
+      var arr = [1, 2, 3, [4, 5, ['A', 'B', 'C']], 9];
+      var arr2 = deepClone(arr);
+      console.log(arr2);
+      console.log(arr2 === arr);
+      arr2[3][2][0] = 1;
+      console.log(arr);
+      console.log(arr2);
+    </script>
+  </body>
+</html>

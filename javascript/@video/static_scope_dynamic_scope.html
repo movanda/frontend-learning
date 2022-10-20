@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 静态作用域：又称词法作用域，是指作用域在词法阶段就被确定了（函数定义的位置就决定了函数的作用域），以后是不会改变。
+      // 动态作用域：函数的作用域在函数调用时才决定的。
+
+      // Static scope: also known as lexical scope, this means that the scope is determined at the lexical stage (where the function is defined determines the scope of the function) and does not change thereafter.
+      // Dynamic scope: The scope of a function is determined when the function is called.
+
+      // POINT：Javascript采用的是词法作用域 ( 静态作用域 ）
+      // POINT：Javascript is lexical scoped (static scoped)
+
+      var a = 1;
+      //Function fn is in global scope
+      function fn() {
+        console.log(a);
+      }
+      function test() {
+        var a = 2;
+        fn();
+      }
+      test(); // 1
+    </script>
+  </body>
+</html>

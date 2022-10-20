@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 得到 [a , b] 区间的整数
+      // get the integer of the interval [a , b]
+      // syntax: parseInt(Math.random() * (b - a + 1)) + a;
+
+      // [2,5]
+      console.log(Math.random() * (5 - 2 + 1) + 2);
+      // [5,10]
+      console.log(Math.random() * (10 - 5 + 1) + 5);
+
+      // Rounding
+      console.log(((Math.random() * 6) >> 0) + 5);
+      console.log(parseInt(Math.random() * 6) + 5);
+    </script>
+  </body>
+</html>

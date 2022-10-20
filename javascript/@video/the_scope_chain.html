@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // POINT
+      // 作用域链查找规则:
+      // 在函数作用域中，操作一个变量时，会由当前函数作用域向外层作用域寻找变量。
+      // 如果在当前作用域中能找到就直接使用。
+      // 如果找不到就向上一层作用域中寻找，找到就可以直接使用。
+      // 如果一直找到全局作用域中依然找不到，则会报错。
+
+      // Scope chain lookup rules:
+      // When a variable is manipulated in a function scope, the variable is searched from the current function scope to the outer scope
+      // Use it directly if you can find it in the current scope
+      // If you can't find it, find it in the next level of scope and use it directly
+      // If the global scope is not found, an error will be reported.
+
+      var a = 1;
+      function fn() {
+        var b = 2;
+        console.log(a); // 1
+        function fn2() {
+          var c = 3;
+          console.log(b); // 2
+          console.log(c); // 3
+        }
+        fn2();
+      }
+      fn();
+    </script>
+  </body>
+</html>

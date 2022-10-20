@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // + - 的特殊用法
+      /* 如果Number函数能把某个类型转换成数字，那+ 和-号也可以。
+      POINT:
+      不过要特别注意 -true和 -false -null这 3 个特殊情况，他们会将其转换成负数
+      【+】能完成转换的前提是只能有一个数字，如果+前有其他数字或元素，就无法实现转换
+      */
+
+      //Special usage of + -
+      /* If the Number function can convert a type to a number, so can the + and -signs.
+      POINT:
+      But pay special attention to the 3 special cases: -true、-false、-null,
+      they will convert it to a negative number.
+      The premise that + can complete the conversion is that there can only be one number,
+      if there are other numbers or elements before +, the conversion cannot be achieved
+      */
+      console.log(+'1');
+      console.log(-'1');
+      console.log(typeof +'1');
+      console.log(typeof -'1');
+      console.log(typeof (1 + '1'));
+      console.log(typeof (1 - '1'));
+      console.log(-true);
+      console.log(-false);
+      console.log(-null);
+    </script>
+  </body>
+</html>

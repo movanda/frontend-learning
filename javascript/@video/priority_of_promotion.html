@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在同一作用域下，如果出现同名的函数和变量，则在变量和函数提升时，会以函数为主。
+      // 同名的函数在函数声明提升时，写在后面的会覆盖前面的。
+
+      // If a function and a variable with the same name appear in the same scope, the function will dominate when the variable and function are promoted.
+      // For functions with the same name, when the function declaration is promoted, the last one overrides the first one.
+
+      // Function of the same name
+      a(); // 2
+      function a() {
+        console.log('1');
+      }
+      function a() {
+        console.log('2');
+      }
+      a(); //2
+
+      // Variables and functions of the same name
+      console.log(b);
+      b();
+      function b() {
+        console.log('hello world');
+      }
+      var b = 3;
+      console.log(b);
+      b = 4;
+      console.log(b);
+
+      // 上面代码在执行前，变量和函数声明提升后代码如下：
+      // Before the execution of the above code, the variable and function declaration after the promotion code is as follows:
+      function b() {
+        console.log('hello world');
+      }
+      console.log(b);
+      b();
+      b = 3;
+      console.log(b);
+      b = 4;
+      console.log(b);
+
+      //
+      function fn() {
+        console.log(c); // undefined
+        console.log(d); // undefined
+        fn2();
+        var c = 1;
+        var d = 3;
+        function fn2() {
+          console.log(c + d); // NaN
+        }
+      }
+      fn();
+    </script>
+  </body>
+</html>

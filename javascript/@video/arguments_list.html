@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      /* POINT
+      arguments是一个类似数组的对象，具有以下特点:
+      - 具有length属性
+      - 可以用[]方括号，书写下标方式访问对象中属性值，下标从0开始
+      - 不具备数组的所有方法，如push,pop,unshift,shift等方法，arguments都没有
+      */
+
+      /* POINT
+      Arguments is an array-like object with the following characteristics:
+      - Has the length attribute
+      - The value of an attribute in an object can be accessed by writing a subscript with [] square brackets. The subscript starts at 0
+      - Does not have all methods of arrays, such as push, POP,unshift,shift, etc. Arguments does not
+      */
+
+      function fn() {
+        console.log(arguments); // {1,2,3,4,5}
+        console.log(arguments[0]); // 1
+        console.log(arguments.length); // 5
+        for (var i = 0; i < arguments.length; i++) {
+          console.log(arguments[i]); // 1,2,3,4,5
+        }
+      }
+      fn(1, 2, 3, 4, 5);
+    </script>
+  </body>
+</html>
