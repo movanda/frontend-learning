@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+      POINT
+      Each media feature must be enclosed in parentheses.
+      If there is only one rule, the media properties and logical operators can be omitted;
+      that is, screen and can be omitted.
+
+      Multiple media features should also have logical operators between them,
+      such as @media screen and (min-width: 400px) and (max-width:750px)
+      */
+      @media (max-width: 700px) {
+        body {
+          background-color: thistle;
+        }
+      }
+      @media screen and (min-width: 700px) and (max-width: 2000px) {
+        body {
+          background-color: lightgrey;
+        }
+      }
+
+      /* dpr */
+      @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          background-color: skyblue;
+        }
+      }
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        body {
+          background-color: pink;
+        }
+      }
+
+      /* orientation */
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: brown;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Hello World!</p>
+  </body>
+</html>

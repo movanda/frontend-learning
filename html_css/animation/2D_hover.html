@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+      .box::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+      }
+      .box:hover::after {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .box .play {
+        display: block;
+        content: '';
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .box:hover .play {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      .box:hover img {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <img src="./images/01.png" alt="" />
+      <span class="play"></span>
+    </div>
+  </body>
+</html>

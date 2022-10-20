@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        background-color: pink;
+      }
+      span {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <span>span</span><span>span</span><span>span</span><span>span</span>
+    </div>
+    <span>
+      span<i style="font-style: normal">i</i>
+      <div>div</div>
+    </span>
+
+    <!-- a标签里不能再放 a标签 -->
+    <!-- no more A tags inside A tags -->
+    <a href="https://yahoo.co.jp">abc<a href="https://www.google.com"></a> </a>
+
+    <!-- a标签里可以放块级元素 -->
+    <!-- block-level elements can be placed inside A tag -->
+    <a href="http://yahoo.co.jp"><div class="box1"></div></a>
+  </body>
+</html>

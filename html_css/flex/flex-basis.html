@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-content {
+        width: 400px;
+        height: 100px;
+        background-color: skyblue;
+        display: flex;
+        align-items: center;
+      }
+
+      .flex-item {
+        height: 50px;
+      }
+
+      .item1 {
+        background-color: khaki;
+        width: 100px;
+        flex-basis: 300px;
+        /* flex-basis的默认值为：auto，即项目本来的大小。flex-basis的优先级要高于width，所以此时item1的宽度为300px。*/
+        /* flex basis defaults to auto, which is the original size of the project.flex basis takes priority over width, so item1 will be 300px wide.*/
+      }
+
+      .item2 {
+        background-color: pink;
+        width: 100px;
+      }
+
+      .item3 {
+        background-color: tomato;
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-content">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+    </div>
+  </body>
+</html>

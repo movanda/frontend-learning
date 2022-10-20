@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: brown;
+      margin-top: 50px;
+      /* overflow: hidden; */ /* Method ①*/
+      /* border: 1px solid transparent; */ /* Method ②*/
+    }
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: burlywood;
+      /* padding-top:130px; */ /* Method ③*/
+      margin-top: 130px;
+    }
+    li {
+      list-style: decimal;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="box1"></div>
+    </div>
+    <br />
+    <br />
+    <ul>
+      解决方案
+      <li>
+        给父元素加上【overflow : hidden】（超过父元素的所有东西都会被隐藏起来）
+      </li>
+      <li>
+        给父元素加上border（把边框的颜色设为透明，有了边框子元素的外边距就被框框设限了）
+      </li>
+      <li>将子元素的margin换成padding</li>
+    </ul>
+  </body>
+</html>

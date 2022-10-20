@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        background-color: pink;
+      }
+
+      .box span {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: skyblue;
+        float: left;
+      }
+      .box1 {
+        border: 2px solid red;
+      }
+      .box1 img {
+        /* 如果是一张图片独占一行，去掉下面的空隙用 display: block */
+        display: block;
+        float: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <span>span1</span>
+      <span>span2</span>
+      <span>span3</span>
+      <span>span4</span>
+    </div>
+
+    <div class="box1">
+      <img src="./02.gif" alt="" />
+      <img src="./02.gif" alt="" />
+      <img src="./02.gif" alt="" />
+    </div>
+  </body>
+</html>

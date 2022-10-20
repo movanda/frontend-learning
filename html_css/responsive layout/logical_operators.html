@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 【and】 和
+      NOTE
+      If both A and B are satisfied, it is true */
+      @media screen and (min-width: 320px) and (max-width: 375px) {
+        body {
+          background-color: wheat;
+        }
+      }
+
+      /* 【,】 或
+      NOTE
+      As long as one of A or B is satisfied, it is true */
+      @media screen and (min-width: 1000px), screen and (max-width: 320px) {
+        body {
+          background: olivedrab;
+        }
+      }
+
+      /* 【not】 非
+      POINT
+      [not] must be written in front of the media type!
+      When [not] and [and] appear together and there is no other query logic,
+      then [not] negates the entire condition. That is: negate the current condition.
+
+      This means: Except for the size other than (min-width: 320px) and (max-width: 375px),
+      the rest of the background color is skyblue */
+      @media not screen and (min-width: 320px) and (max-width: 375px) {
+        body {
+          background: skyblue;
+        }
+      }
+
+      /*
+      POINT
+      In the following case, [not] does not negate all,
+      but only negates the preceding one up to the comma.
+
+      It means: the minimum size of the screen is not 500px, or the screen is horizontal,
+      as long as one of them is satisfied, the background color is slateblue.
+      */
+      @media not screen and (min-width: 500px),
+        screen and (orientation: landscape) {
+        body {
+          background: slateblue;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Hello World!</p>
+  </body>
+</html>

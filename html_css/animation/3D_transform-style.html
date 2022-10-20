@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 2px solid red;
+        margin: 120px;
+        perspective: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+      }
+      /* NOTE */
+      /* transform-style：指你要你下面的【子元素】用哪种形式表达。默认为flat，即平面。
+      但是要做3D的话，一般都是要用preserve-3d的，不然看不到效果 */
+      /* transform-style: indicates the form in which you want your child elements to be expressed.The default value is flat.
+      But for 3D, it is usually preserve-3d, otherwise you will not see the effect */
+
+      .item1 {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(135, 206, 235, 0.5);
+        transform: rotateX(60deg);
+      }
+
+      .item2 {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(240, 230, 14, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotateY(60deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1"></div>
+      <div class="item2"></div>
+    </div>
+  </body>
+</html>

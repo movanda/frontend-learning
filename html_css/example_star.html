@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rating {
+        display: flex;
+        /*
+      思路：
+      当我鼠标滑到3时，我要我前面的1,2都亮起，可是没有连接前面的兄弟元素的符号，
+      所以逆向思维，我把12345，变成54321，再用[~]连接后面的兄弟元素，就能实现。
+      */
+        flex-direction: row-reverse;
+      }
+
+      .rating-star {
+        font-size: 50px;
+      }
+
+      .rating-star::before {
+        content: '★';
+        color: #ccc;
+      }
+
+      /* 我要我自己，再加上我的兄弟元素，当鼠标滑过的时候亮起 */
+      /* 逗号前是我自己，[~]是连接后面兄弟元素的符号 */
+      .rating .rating-star.current::before,
+      .rating .rating-star.current ~ .rating-star::before {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="rating">
+      <!--
+      span里写【☆1☆2☆3☆4☆5】只是为了最初让你知道星星在哪个位置，
+      以及整理逻辑思维方式，其实是不用写的，用伪元素::before就好。
+    -->
+
+      <!--
+      <span class="rating-star">☆1</span>
+      <span class="rating-star">☆2</span>
+      <span class="rating-star">☆3</span>
+      <span class="rating-star">☆4</span>
+      <span class="rating-star">☆5</span>
+    -->
+
+      <span class="rating-star"></span>
+      <span class="rating-star"></span>
+      <span class="rating-star"></span>
+      <span class="rating-star"></span>
+      <span class="rating-star"></span>
+    </div>
+
+    <script>
+      var rating = document.querySelectorAll('.rating .rating-star');
+      var len = rating.length;
+      for (let i = 0; i < len; i++) {
+        rating[i].onclick = function () {
+          for (let j = 0; j < len; j++) {
+            rating[j].classList.remove('current');
+          }
+          this.classList.add('current');
+        };
+      }
+    </script>
+  </body>
+</html>

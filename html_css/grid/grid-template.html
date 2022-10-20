@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        width: 400px;
+        height: 300px;
+        display: grid;
+        margin: 100px;
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 100px);
+        grid-template-areas:
+          'a a b'
+          'a a b'
+          'c c c';
+        grid-template: 100px 200px / 50px 100px;
+        grid-template: repeat(3, 100px) / repeat(3, 100px);
+        grid-template:
+          'a a b' 50px
+          'a a b' 100px
+          'c c c' 50px / 100px 100px 100px;
+      }
+
+      .item1 {
+        grid-area: a;
+        background-color: pink;
+      }
+      .item2 {
+        grid-area: b;
+        background-color: khaki;
+      }
+      .item3 {
+        grid-area: c;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+      </div>
+    </body>
+  </body>
+</html>

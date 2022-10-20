@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <title>Document</title>
+    <style>
+      .swiper-container {
+        width: 800px;
+        height: 400px;
+      }
+
+      .swiper-slide {
+        font-size: 100px;
+        text-align: center;
+      }
+      .swiper-slide:nth-child(n) {
+        background-color: skyblue;
+      }
+      .swiper-slide:nth-child(2n) {
+        background-color: khaki;
+      }
+      .swiper-slide:nth-child(3n) {
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- 如果需要滚动条 -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper-container', {
+        // direction: 'vertical', // 垂直切换选项，默认为水平：horizontal。
+        loop: true, // 循环模式选项
+
+        // initialSlide: 2, // 默认为0，即第一张slide，这里为2，意为一开始就显示第3张slide
+
+        grabCursor: true,
+
+        // slidesPerView: 2,
+        // breakpoints: {
+        //   1000: {
+        //     //当屏幕宽度大于等于1000
+        //     slidesPerView: 2,
+        //     spaceBetween: 10,
+        //   },
+        //   1200: {
+        //     //当屏幕宽度大于等于1200
+        //     slidesPerView: 3,
+        //     spaceBetween: 20,
+        //   },
+        //   1400: {
+        //     //当屏幕宽度大于等于1400
+        //     slidesPerView: 4,
+        //     spaceBetween: 30,
+        //   },
+        // },
+
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    </script>
+  </body>
+</html>

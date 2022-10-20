@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .box1 {
+        background-color: blueviolet;
+        margin-bottom: 50px;
+      }
+      .box2 {
+        background-color: seagreen;
+        margin-top: 30px;
+        display: inline-block;
+      }
+      li {
+        list-style: decimal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <br />
+    <br />
+    <br />
+    <ul>
+      解决方案
+      <li>
+        任何一个元素加上【display:inline-block;】<br />
+        此时本案例中的margin值为80px（即margin-bottom: 50px + margin-top: 30px）
+      </li>
+      <li>把外边距只加在一个元素上</li>
+      <li>任意一个元素外边距换成对应的padding</li>
+    </ul>
+  </body>
+</html>

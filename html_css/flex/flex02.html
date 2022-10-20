@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        width: 600px;
+        height: 600px;
+        background-color: skyblue;
+        display: flex;
+        /* 交叉轴对齐方式，垂直居中 */
+        /* Cross axis alignment, vertical center */
+        /* align-items: stretch;是默认值。不写也是stretch */
+        /* align-items: stretch; is the default value. */
+        align-items: center;
+      }
+      /* POINT */
+      /* align-item  VS align-content */
+      /* align-item是单行对齐方式，align-content是多行对齐方式 */
+      /* align-item is a single-line alignment, and align-content is a multi-line alignment */
+
+      .flex-item {
+        width: 100px;
+        /* 当没有设置高度时，看父元素的，父元素现在为align-items: stretch；即拉伸，那子元素也随之拉伸。 */
+        /* align-items: stretch要想生效，这里就不能设置高度 */
+        /* When no height is set, look at the parent element's, the parent element is now align-items: stretch; And that child element is stretching.* /
+        /* align-items: For stretch to work, you cannot set the height */
+        /* height: 100px; ❌*/
+        font-size: 40px;
+      }
+
+      .flex-item:nth-child(n) {
+        background-color: khaki;
+      }
+      .flex-item:nth-child(2n) {
+        background-color: pink;
+      }
+      .item1 {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+    </div>
+  </body>
+</html>

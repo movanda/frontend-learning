@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 800px;
+        height: 600px;
+        background-color: pink;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .item {
+        box-sizing: border-box;
+        width: 21%;
+        border: 2px solid #000;
+      }
+
+      span {
+        box-sizing: border-box;
+        /* 要和元素一样的宽度 */
+        width: 21%;
+        /* 不给span加高度是为了不影响后面的元素 */
+        height: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <!-- 加两个span就解决了 -->
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>

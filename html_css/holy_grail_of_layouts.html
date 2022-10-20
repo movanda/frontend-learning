@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      .main {
+        height: 100%;
+        display: flex;
+      }
+
+      .middle {
+        width: 250px;
+        background-color: pink;
+        /* order默认为0，数字越大越靠右 */
+        order: 1;
+        /* 屏幕拉伸我就跟着拉伸，缩小我就跟着缩小 */
+        flex-grow: 1;
+        /* 最多缩到700px，不可以小于700px的意思 */
+        flex-basis: 700px;
+      }
+
+      .left {
+        width: 200px;
+        background-color: skyblue;
+      }
+
+      .right {
+        width: 200px;
+        background-color: khaki;
+        order: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 双飞翼布局 -->
+    <!-- Holy Grail of Layouts -->
+    <div class="main">
+      <div class="middle">center</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>

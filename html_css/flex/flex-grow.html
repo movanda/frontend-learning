@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-content {
+        width: 600px;
+        height: 600px;
+        background-color: skyblue;
+        display: flex;
+      }
+
+      .flex-item {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+      }
+
+      .flex-item:nth-child(n) {
+        background-color: khaki;
+      }
+
+      .flex-item:nth-child(2n) {
+        background-color: pink;
+      }
+
+      /*
+    Space left over：
+    600px(Width of the parent element) - (100px + 100px + 100px)(Sum of the widths of the child elements) = 300px
+    But if each of the child elements is 300px wide, then the sum of the three elements is 900px, which is larger than 600px of the parent element,
+    so there is no room left. Thus, the total width of the child elements must be less than the width of the parent element!
+    */
+
+      /*
+    flex-grow
+    ① 当所有项目(flex-item)的flex-grow值的总和加起来，<1时。
+    项目放大后宽 = 项目原始宽 + (剩余空间 * 所有项目的flex-grow值的总和) * (flex-grow值) / 所有项目的flex-grow值总和
+    ① When the sum of flex-grow values of all items (flex-item) is less than 1.
+    The enlarged width of the item = The original width of the item + (Space left over * The sum of flex grow values for all items) * (flex-grow) / Sum of flex grow values for all items
+    */
+
+      /*
+    item1 = 100px + （Space left over：600px - 100px * 3 = 300px * 0.6）* 0.1 / 0.6 = 130px
+    item2 = 100px + （Space left over：600px - 100px * 3 = 300px * 0.6）* 0.2 / 0.6 = 160px
+    item3 = 100px + （Space left over：600px - 100px * 3 = 300px * 0.6）* 0.3 / 0.6 = 190px
+    */
+
+      .item1 {
+        flex-grow: 0.1;
+      }
+
+      .item2 {
+        flex-grow: 0.2;
+      }
+
+      .item3 {
+        flex-grow: 0.3;
+      }
+
+      /*
+    flex-grow
+    ② 当所有项目(flex-item)的flex-grow值的总和加起来，>=1时。
+    项目放大后宽 = 项目原始宽 + 剩余空间 * (flex-grow值) / 所有项目的flex-grow值总和
+    ② When the sum of the flex grow values of all flex items is added up, >=1.
+    The enlarged width of the item = The original width of the item + Space left over * (flex-grow) / The sum of flex grow values for all items
+    */
+
+      /*
+    当所有项目(flex-item)的flex-grow值的总和加起来 =1时
+    当When the sum of the flex-grow values of all items (flex-item) is equal to 1
+    */
+
+      .item1 {
+        flex-grow: 0;
+      }
+
+      .item2 {
+        flex-grow: 1;
+      }
+
+      .item3 {
+        flex-grow: 0;
+      }
+
+      /*
+    item2 = 100px + （剩余空间：600px - 100px * 3 = 300px）* 1 / 1 = 400px
+    */
+
+      /*
+    当所有项目(flex-item)的flex-grow值的总和加起来 >1时
+    When the sum of the flex-grow values of all items (flex-item) adds up to >1
+    */
+
+      .item1 {
+        flex-grow: 1;
+      }
+
+      .item2 {
+        flex-grow: 2;
+      }
+
+      .item3 {
+        flex-grow: 3;
+      }
+
+      /*
+    item1 = 100px + （Space left over：600px - 100px * 3 = 300px）* 1 / 6 = 150px
+    item2 = 100px + （Space left over：600px - 100px * 3 = 300px）* 2 / 6 = 200px
+    item3 = 100px + （Space left over：600px - 100px * 3 = 300px）* 3 / 6 = 250px
+    */
+    </style>
+  </head>
+
+  <body></body>
+
+  <div class="flex-content">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+  </div>
+</html>

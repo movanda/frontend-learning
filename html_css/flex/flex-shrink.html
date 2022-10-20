@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-content {
+        width: 400px;
+        height: 100px;
+        background-color: skyblue;
+        display: flex;
+        align-items: center;
+        flex-grow: nowrap;
+      }
+
+      .flex-item {
+        height: 50px;
+      }
+
+      /* 当所有子元素的宽度总和大于父元素的宽度，且容器设置了flex-grow: nowrap时（即不能换行，能换行就说明有空间了，那有空间就不用缩放了呀），flex-shrink才能生效。 flex-shrink默认值为1。*/
+      /*When the total width of all child elements is greater than the width of the parent element and the container is set to flex-grow: nowrap，flex-shrink will only take effect。 The Flex shrink value is 1 by default.*/
+
+      /*
+    当flex-shrink所有值的总和 <1时
+    ・　溢出宽 = 所有项目宽 - 容器宽
+    ・　所有子元素缩放总宽 = 溢出宽 * 所有项目flex-shrink值总和
+    ・　项目收缩宽 = ((项目原始宽 * flex-shrink值) / (每个项目宽 * flex-shrink值)的总和)) * 所有子项目缩放总宽
+    ・　项目收缩后宽 = 项目原始宽 - 项目收缩宽
+    */
+
+      /*
+    溢出宽 = （100px + 200px + 300px）- 400px = 200px
+    所有子项目缩放总宽 = 200px * 0.9 = 180px
+
+    项目收缩宽：
+    (每个项目宽 * flex-shrink值的总和) →  100*0.4 + 200*0.3 + 300*0.2 = 160px
+    item1 = ((100px * 0.4) / 160px) * 180px = 45px
+    item2 = ((200px * 0.3) / 160px) * 180px = 67.5px
+    item3 = ((300px * 0.2) / 160px) * 180px = 67.5px
+
+    项目收缩后宽：
+    item1 = 100px - 45px = 55px
+    item2 = 200px - 67.5px = 132.5px
+    item3 = 300px - 67.5px = 232.5px
+    */
+
+      .item1 {
+        background-color: khaki;
+        width: 100px;
+        flex-shrink: 0.4;
+      }
+
+      .item2 {
+        background-color: pink;
+        width: 200px;
+        flex-shrink: 0.3;
+      }
+
+      .item3 {
+        background-color: tomato;
+        width: 300px;
+        flex-shrink: 0.2;
+      }
+    </style>
+  </head>
+
+  <body></body>
+
+  <div class="flex-content">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+  </div>
+</html>

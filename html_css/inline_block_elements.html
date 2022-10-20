@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 行内块级元素支持宽高属性 */
+      /* Inline block elements support the width and height attribute */
+      input {
+        width: 200px;
+        height: 40px;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      div {
+        display: inline-block;
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 行内块级元素会在一行内显示， 放不下就会换行显示。 -->
+    <!-- inline block elements are displayed on one line, and if they don't fit, they are displayed on a new line. -->
+    <input type="text" name="" id="" />
+    <input type="text" name="" id="" />
+    <input type="text" name="" id="" />
+    <img src="./images/01.png" alt="" />
+    <img src="./images/01.png" alt="" />
+    <img src="./images/01.png" alt="" />
+
+    <div>content in div</div>
+  </body>
+</html>

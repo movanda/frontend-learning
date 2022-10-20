@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 20px;
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        animation: changeWidth 4s;
+      }
+      @keyframes changeWidth {
+        from {
+          background-color: skyblue;
+          width: 200px;
+          height: 200px;
+        }
+        to {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        animation: changeHeight 4s linear;
+      }
+      @keyframes changeHeight {
+        0% {
+          background-color: skyblue;
+          width: 100px;
+          height: 100px;
+        }
+        50% {
+          width: 120px;
+          height: 120px;
+        }
+        75% {
+          width: 150px;
+          height: 150px;
+        }
+        100% {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </body>
+</html>

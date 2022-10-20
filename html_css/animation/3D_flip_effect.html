@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .book {
+        width: 300px;
+        height: 400px;
+        margin: 200px 0 0 400px;
+        perspective: 1000px;
+      }
+      .page {
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-style: preserve-3d;
+        transform-origin: left;
+        transition: all 1s;
+      }
+      .book:hover .page{
+        transform: rotateY(-180deg);
+      }
+      .page-front,
+      .page-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 400px;
+        font-size: 30px;
+        line-height: 400px;
+        text-align: center;
+      }
+      .page-front {
+        background: url(./images/02.png) no-repeat center;
+        background-size: cover;
+      }
+      .page-back {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        transform: translateZ(-1px) rotateY(-180deg);
+        background: url(./images/03.png) no-repeat center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="book">
+      <div class="page">
+        <div class="page-front"></div>
+        <div class="page-back"></div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

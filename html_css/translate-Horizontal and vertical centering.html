@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: skyblue;
+        position: relative;
+      }
+
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: khaki;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /*
+        NOTE
+        如果写固定值的transform，translate就没有意义了，
+        因为用margin也能解决，就没有必要用transform了。
+        transform: translate(-50px,-50px);
+        */
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

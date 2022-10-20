@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        margin: 100px;
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 99, 71, 0.5);
+
+        /*First rotate 90 degrees, then shift 200px*/
+        /* transform: rotate(90deg) translateX(200px); */
+
+        /*First shift 200px, then rotate 90 degrees*/
+        transform: translateX(200px) rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">12345</div>
+    </div>
+  </body>
+</html>

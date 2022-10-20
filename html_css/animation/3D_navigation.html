@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 80px;
+        background-color: rgb(111, 184, 213);
+        margin-top: 50px;
+        padding-left: 30px;
+      }
+      ul li {
+        float: left;
+        margin: 0 5px;
+        perspective: 300px;
+      }
+      ul li a {
+        display: block;
+        padding: 0 30px;
+        height: 80px;
+        line-height: 80px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        background-color: rgb(111, 184, 213);
+      }
+
+      .back {
+        background-color: rgb(61, 150, 186);
+        transform-origin: top;
+        transform: rotateX(-90deg);
+      }
+
+      ul li .rotate {
+        height: 80px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% -40px;
+      }
+
+      ul li:hover .rotate {
+        transform: rotateX(90deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <div class="rotate">
+          <a href="" class="front">HOME</a>
+          <a href="" class="back">HOME</a>
+        </div>
+      </li>
+      <li>
+        <div class="rotate">
+          <a href="" class="front">MENU</a>
+          <a href="" class="back">MENU</a>
+        </div>
+      </li>
+      <li>
+        <div class="rotate">
+          <a href="" class="front">MAP</a>
+          <a href="" class="back">MAP</a>
+        </div>
+      </li>
+      <li>
+        <div class="rotate">
+          <a href="" class="front">ABOUT</a>
+          <a href="" class="back">ABOUT</a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

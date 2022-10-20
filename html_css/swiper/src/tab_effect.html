@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <style>
+      body,
+      html,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+
+      .clearfix::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+
+      .tab {
+        width: 800px;
+        height: 500px;
+        margin: 200px;
+      }
+      .tab ul li {
+        width: 100px;
+        height: 50px;
+        background-color: #ddd;
+        float: left;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .tab ul li.active {
+        background-color: rgb(131, 131, 131);
+        color: #fff;
+      }
+
+      .tab .tab-con,
+      .tab .swiper-container {
+        width: 100%;
+        height: 450px;
+      }
+
+      .swiper-slide {
+        font-size: 50px;
+        text-align: center;
+        line-height: 450px;
+      }
+
+      .swiper-slide:nth-child(n) {
+        background-color: pink;
+      }
+      .swiper-slide:nth-child(2n) {
+        background-color: khaki;
+      }
+      .swiper-slide:nth-child(3n) {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tab">
+      <!-- tab选项卡按钮 -->
+      <ul class="clearfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+
+      <div class="tab-con">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/swiper-bundle.min.js"></script>
+
+    <script>
+      // 获取到的是所有li所形成的一个数组
+      var tabItem = document.querySelectorAll('.tab ul li');
+      var len = tabItem.length;
+      for (let i = 0; i < len; i++) {
+        tabItem[i].index = i;
+        tabItem[i].onclick = function () {
+          mySwiper.slideTo(this.index);
+          for (let j = 0; j < len; j++) {
+            tabItem[j].classList.remove('active');
+          }
+          this.classList.add('active');
+        };
+      }
+
+      var mySwiper = new Swiper('.swiper-container', {
+        grabCursor: true,
+
+        on: {
+          slideChangeTransitionEnd: function () {
+            // console.log(this.realIndex); //切换结束时，告诉我现在是第几个slide
+            for (let j = 0; j < len; j++) {
+              tabItem[j].classList.remove('active');
+            }
+            tabItem[this.realIndex].classList.add('active');
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

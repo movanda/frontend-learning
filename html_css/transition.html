@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 20px;
+        display: inline-block;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* transition: css过渡属性名  过渡时间  运动的速度  延迟时间*/
+        /* transition: border-radius 0.5s linear 1s; */
+        /* transition: width 2s; */
+        /* transition: background-color 1s; */
+
+        /* all 所有你自己的css定义的属性都变化 即下面的圆角，宽和背景色*/
+        transition: all 1s;
+      }
+
+      .box1:hover {
+        border-radius: 50%;
+        width: 400px;
+        background-color: skyblue;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: khaki;
+        transition: width 1s, background-color 2s, border-radius 3s;
+      }
+      .box2:hover {
+        border-radius: 50%;
+        width: 400px;
+        background-color: skyblue;
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        transition-property: width, height;
+        transition-duration: 1s, 4s;
+      }
+      .box3:hover {
+        width: 400px;
+        height: 400px;
+      }
+
+      .box4 {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        transition-property: width, height, background-color;
+        transition-duration: 1s, 4s;
+        /*
+        NOTE
+        没有给属性设定时间的情况下，以第一个时间为准。
+        这里的background-color就是1s。
+        */
+      }
+      .box4:hover {
+        width: 400px;
+        height: 400px;
+        background-color: darkorange;
+      }
+
+      /* 时间函数 */
+      /* 贝塞尔曲线 */
+      .box5 {
+        width: 200px;
+        height: 200px;
+        background-color: thistle;
+        transition: width 2s cubic-bezier(0.91, -0.55, 0.62, 0.73);
+      }
+      .box5:hover {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        padding: 50px;
+        font-size: 0;
+      }
+      .item {
+        width: 50px;
+        height: 50px;
+        background-color: skyblue;
+        display: inline-block;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <br />
+    <br />
+    <h2>盒模型可视宽高</h2>
+    <div>
+      可视区宽 = 宽度+左右内边距+左右边框宽<br />
+      可视区高 = 高度+上下内边距+上下边框宽
+    </div>
+    <h2>盒模型实际占位宽高</h2>
+    <div>
+      实际占位宽 = 宽度+左右内边距+左右边框宽+左右外边距<br />
+      实际占位高 = 高度+上下内边距+上下边框宽+上下外边距
+    </div>
+  </body>
+</html>

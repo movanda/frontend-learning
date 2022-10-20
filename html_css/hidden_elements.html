@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+        display: none;
+      }
+      span {
+        display: none;
+      } */
+      .none {
+        /* 元素隐藏后不再占据位置，相当于元素没有出现一样。 */
+        /* 子元素也会同时被隐藏 */
+        display: none;
+      }
+      .hidden {
+        /* 元素隐藏后， 还是占据着原来的位置。 */
+        /* 子元素可以通过  visibility: visible; 重新可见 */
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>div</div>
+    <span>span</span>
+    <p>
+      I'm in front of the hidden element,
+      <span class="none">I'm the hidden content</span> I am behind the hidden
+      element.
+    </p>
+    <p>
+      I'm in front of the hidden element,
+      <span class="none">I'm the hidden content</span> I am behind the hidden
+      element.
+    </p>
+  </body>
+</html>

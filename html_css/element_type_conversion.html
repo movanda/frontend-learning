@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #fff;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(16, 98, 71);
+        /* 将元素转换为内联元素后， 之前设置的宽高就不起作用了 */
+        /* After converting an element to an inline element, the previously set width and height won't work */
+        display: inline;
+      }
+
+      p {
+        background-color: navy;
+        /* 将元素转换为内联元素后， 之前设置的宽高就不起作用了 */
+        /* After converting an element to an inline element, the previously set width and height won't work */
+        display: inline;
+      }
+
+      a {
+        display: block;
+        width: 200px;
+        height: 50px;
+        background-color: brown;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div</div>
+    <p>p</p>
+
+    <a href="https://www.yahoo.co.jp">Yahoo Japan!</a>
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </body>
+</html>

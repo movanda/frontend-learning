@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        margin: 200px;
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 100px);
+        grid-auto-flow: column dense;
+        grid-auto-flow: row dense;
+      }
+
+      .grid-item {
+        font-size: 30px;
+      }
+
+      .item3 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: span 2;
+        grid-row-end: 4;
+        background-color: rgba(255, 192, 203, 0.433);
+        z-index: 9;
+        grid-column: 2/4;
+        grid-row: span 2/4;
+        grid-area: auto/auto/auto/span2;
+        grid-area: span 2/2/4/4;
+      }
+
+      .item6 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-color: khaki;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item item3">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item item6">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>

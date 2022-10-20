@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-content {
+        /* width: 400px; */
+        height: 100px;
+        background-color: skyblue;
+        display: flex;
+        align-items: center;
+      }
+
+      .flex-item {
+        height: 50px;
+      }
+
+      /*
+      flex属性是flex-grow，flex-shrink，flex-basis的简写，
+      默认值为：0 1 auto，后两个属性可选。
+      The flex attribute is short for flex-grow, flex-shrink, flex-basis,
+      The default value is 0 1 auto. The last two properties are optional.
+
+      flex：auto；  → flex: 1 1 auto；
+      flex：none；  → flex: 0 0 auto；
+      flex：1；     → flex： 1 1  0%；   When there is no space left, the element disappears.
+      */
+
+      .item1 {
+        background-color: khaki;
+        width: 300px;
+        flex-shrink: 0;
+      }
+
+      .item2 {
+        background-color: pink;
+        width: 100px;
+        flex: 1;
+        /* 添加了overflow：hidden；之后，连文字也可以被压缩没了。 */
+        /* added overflow: hidden;After that, even the text can be compressed away.*/
+        overflow: hidden;
+      }
+
+      .item3 {
+        background-color: tomato;
+        width: 400px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-content">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+    </div>
+  </body>
+</html>
