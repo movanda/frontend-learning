@@ -1,0 +1,474 @@
+/* m-header start */
+.m-header {
+  height: 50px;
+  margin: 18px 19px 22px 29px;
+  display: flex;
+  /* 垂直方向居中 */
+  align-items: center;
+}
+.m-header a.logo {
+  flex-grow: 1;
+}
+.m-header a.logo img {
+  width: 146px;
+}
+.m-header a.search {
+  margin-right: 42px;
+}
+.m-header a.search img {
+  width: 38px;
+}
+.m-header a.login {
+  margin-right: 49px;
+}
+.m-header a.login img {
+  width: 46px;
+}
+.m-header a.download {
+  /*
+  当它的父元素设置了display：flex（弹性布局）的时候，
+  因为它的子元素都为行内块元素（行内块元素可以设置宽高），
+  所以子元素就不用再设置display了。
+  */
+  /* display: block; */
+  width: 144px;
+  height: 48px;
+  background-color: #ff9f00;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px;
+  border-radius: 8px;
+}
+/* end m-header */
+
+/* m-nav start */
+.m-nav {
+  /*
+  看设计稿算出高度的思路：
+  【首页...】这一行文字与下面那根长长的灰线的距离为23px，
+  字体大小为28px，要想垂直居中，那它离上面的距离也必定是23px，
+  所以 23*2+28 = 74px
+  */
+  height: 74px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.m-nav .swiper-wrapper {
+  padding-left: 30px;
+}
+#swiper-nav {
+  width: 100%;
+  height: 100%;
+}
+#swiper-nav .swiper-slide {
+  height: 74px;
+}
+#swiper-nav .swiper-slide a {
+  /*
+  如果不给a标签设置display：block，它的大小就是内容大小，即这里的文字。
+  点击的时候只有点到文字区域上，才会触发。
+  如果想那一整个区块都是a标签就要给它加display：block。
+  */
+  /* display: block; */
+  /*
+  由于此案例涉及文字下面有一根下划线，如果设置为block的话，会变成一整条线，
+  所以这里要用display：inline-block。
+  */
+  display: inline-block;
+  color: #6b6b6b;
+  font-size: 28px;
+  height: 72px;
+  line-height: 72px;
+  /*
+  在移动环境下，对性能的要求非常高，
+  active时才有的属性，在一般的时候，为了防止浏览器重新对盒模型进行计算，
+  所以在这里加了两像素透明下划线，这样它就不用再重绘重排(耗时耗性能)了。
+  */
+  border-bottom: 2px solid transparent;
+}
+#swiper-nav .swiper-slide a.active {
+  color: #ff9f00;
+  border-color: #ff9f00;
+}
+/* end m-nav */
+
+/* m-main start */
+.m-main {
+  margin: 19px 19px 100px;
+}
+
+/* m-main > m-banner start */
+.m-banner {
+  width: 712px;
+  height: 236px;
+}
+#swiper-banner .swiper-slide {
+  display: block;
+}
+#swiper-banner .swiper-slide a img {
+  width: 100%;
+}
+/* 重置分页器样式 */
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 6px;
+  border-radius: 0px;
+  background-color: #fff;
+  position: relative;
+  bottom: -6px;
+}
+
+/* m-main > m-menu start */
+.m-menu {
+  box-sizing: border-box;
+  width: 100%;
+  height: 314px;
+  margin-top: 18px;
+  padding: 30px 0px 31px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+.m-menu ul {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  /* 垂直方向对齐 */
+  align-content: space-between;
+}
+.m-menu ul li {
+  width: 20%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.m-menu ul li a {
+  width: 76px;
+  text-align: center;
+  color: #6b6b6b;
+}
+.m-menu ul li a img {
+  width: 100%;
+}
+.m-menu ul li p {
+  line-height: 1;
+  padding-top: 12px;
+  /*
+  第二种写法：
+  这里p的字体大小为24px，行高为1.5，即 24*1.5 = 36px，
+  （36px-24px）/ 2 = 4px
+  设置padding-top:4px 也可以。
+  */
+}
+
+/* m-main > m-recommend start */
+.m-recommend {
+  margin-top: 18px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+}
+.m-recommend .m-recommend-tab {
+  display: flex;
+  height: 104px;
+  /* 垂直方向居中 */
+  align-items: center;
+}
+.m-recommend .m-recommend-tab li {
+  width: 116px;
+  height: 42px;
+  line-height: 42px;
+  margin: 0 17px 0 12px;
+  color: #6b6b6b;
+  border-radius: 22px;
+  border: 2px solid #6b6b6b;
+  text-align: center;
+}
+.m-recommend .m-recommend-tab li.active {
+  color: #ff9f00;
+  border-color: #ff9f00;
+}
+.m-recommend .m-recommend-content {
+  height: 296px;
+  overflow: hidden;
+}
+.m-recommend-content .m-recommend-list {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#swiper-recommend1 {
+  width: 100%;
+  height: 100%;
+}
+/* common start */
+.common-list {
+  width: 100%;
+}
+/* 图片按比例缩放代码 */
+.common-list .common-list-view {
+  display: block;
+  height: 194px;
+  position: relative;
+}
+.common-list .common-list-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 以上 */
+.common-list .mask {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.7)
+  );
+  color: #fff;
+}
+.common-list .mask .common-list-play,
+.common-list .mask .common-list-info {
+  display: flex;
+  align-items: center;
+}
+.common-list .mask .common-list-play span,
+.common-list .mask .common-list-info span {
+  width: 31px;
+  height: 27px;
+  background-size: cover;
+  margin-right: 12px;
+}
+.common-list .mask .common-list-play span {
+  background-image: url(../images/playSqurare@2x.png);
+}
+.common-list .mask .common-list-info span {
+  background-image: url(../images/message@2x.png);
+}
+.common-list .common-list-title {
+  height: 58px;
+  line-height: 1.2;
+  margin-top: 14px;
+}
+.common-list .common-list-title a {
+  color: #000;
+  /* 超出部分隐藏 */
+  overflow: hidden;
+  /* 文字超出部分显示省略号 */
+  text-overflow: ellipsis;
+  /* 对象作为弹性盒子模型显示 */
+  display: -webkit-box;
+  /* 块容器中的内容限制为指定的行数 */
+  -webkit-line-clamp: 2;
+  /* 弹性盒子对象的子元素排列方式为竖排 */
+  -webkit-box-orient: vertical;
+}
+
+/* m-main > m-hot start */
+.m-hot {
+  margin-top: 18px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  padding: 0 20px;
+}
+
+.m-hot ul li {
+  height: 76px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.m-hot ul li:last-child {
+  border: none;
+}
+.m-hot ul li a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.m-hot ul li .m-hot-img {
+  display: block;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+.m-hot ul li .m-hot-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.m-hot ul li a .m-hot-info {
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 15px;
+}
+.m-hot ul li a .m-hot-info .title {
+  font-size: 26px;
+  color: #ff9f00;
+  line-height: 1;
+}
+.m-hot ul li a .m-hot-info .desc {
+  color: #000;
+  margin-top: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m-hot ul li a .m-hot-play {
+  width: 44px;
+  height: 44px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  background-color: khaki;
+}
+.m-hot ul li a .m-hot-play img {
+  width: 100%;
+  height: 100%;
+}
+
+/* m-main > m-focus start */
+.m-focus {
+  margin-top: 18px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+}
+.m-focus-title {
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.m-focus-title span {
+  font-size: 32px;
+  flex-grow: 1;
+}
+.m-focus-title a {
+  display: flex;
+  align-items: center;
+  color: #b9b9bd;
+}
+.m-focus-title a img {
+  width: 11px;
+  height: 20px;
+  margin-left: 20px;
+}
+.m-focus .m-focus-content {
+  width: 100%;
+  height: 321px;
+}
+#swiper-focus {
+  width: 100%;
+  height: 100%;
+}
+#swiper-focus .swiper-slide {
+  width: 170px;
+}
+.m-focus .m-focus-content .swiper-slide a {
+  display: block;
+}
+.m-focus .m-focus-content .swiper-slide a .focus-img {
+  width: 100%;
+  height: 228px;
+}
+.m-focus .m-focus-content .swiper-slide a .focus-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.m-focus .m-focus-content .swiper-slide .m-focus-desc {
+  margin-top: 13px;
+  line-height: 1.2;
+  text-align: center;
+  color: #000; /* 超出部分隐藏 */
+  overflow: hidden;
+  /* 文字超出部分显示省略号 */
+  text-overflow: ellipsis;
+  /* 对象作为弹性盒子模型显示 */
+  display: -webkit-box;
+  /* 块容器中的内容限制为指定的行数 */
+  -webkit-line-clamp: 2;
+  /* 弹性盒子对象的子元素排列方式为竖排 */
+  -webkit-box-orient: vertical;
+}
+
+/* m-main > m-view-list start*/
+.m-view-list {
+  margin-top: 18px;
+}
+.m-view-list .m-view-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.m-view-list .m-view-list-wrapper .common-list {
+  width: 346px;
+  margin-bottom: 30px;
+}
+/* end m-main */
+
+/* tabbar start */
+.tabbar {
+  display: fixed;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  /* 兼容 ios < 11.2 */
+  padding-bottom: constant(safe-area-inset-bottom);
+  /* 兼容 ios >11.2 */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.tabbar ul {
+  display: flex;
+  padding: 15px 44px 0;
+  justify-content: space-between;
+}
+.tabbar li {
+  width: 48px;
+}
+.tabbar ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tabbar ul li a img {
+  width: 40px;
+  height: 40px;
+}
+.tabbar ul li.upload {
+  width: 78px;
+  height: 76px;
+}
+.tabbar ul li.upload a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  background: #ff9f00 url(../images/plus@2x.png) no-repeat center;
+  background-size: 50%;
+}
+.tabbar ul li a p {
+  margin-top: 4px;
+  color: #000;
+  position: relative;
+}
+.tabbar ul li a p i {
+  width: 72px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tabbar ul li.active p {
+  color: #ff9f00;
+}
+/* end tabbar */

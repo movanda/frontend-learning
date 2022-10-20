@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      #item2,
+      #item3 {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="item" id="item1"></div>
+    <div class="item" id="item2"></div>
+    <div class="item" id="item3"></div>
+
+    <script>
+      var item1 = document.getElementById('item1');
+      var item2 = document.getElementById('item2');
+      var item3 = document.getElementById('item3');
+
+      // 获取第一个item的宽
+      var w1 = item1.clientWidth;
+      // 获取第二个item的宽
+      var w2 = item2.clientWidth;
+      // 获取第三个item的宽
+      var w3 = item3.clientWidth;
+
+      console.log(w1, w2, w3);
+    </script>
+  </body>
+</html>

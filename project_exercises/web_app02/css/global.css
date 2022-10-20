@@ -1,0 +1,28 @@
+body {
+  font: 0.32rem/1.5 MicrosoftYaHei;
+  color: #000;
+  /* 去掉点击的高亮显示效果 */
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+html,
+ul {
+  margin: 0;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  /* 图片默认会和底部有一个距离，所以设置以下代码即可消除这个问题 */
+  vertical-align: top;
+}
+i {
+  font-style: normal;
+}

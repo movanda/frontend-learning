@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"
+    />
+    <!--
+      最大缩放比例： maximum-scale=1.0，
+      不允许用户缩放： user-scalable=no，
+      是可以自信添加的
+    -->
+    <title>移动Web项目02开发</title>
+    <!--
+      css引用导入顺序：（优先级相关）
+      1 重置样式
+      2 网站通用布局
+      3 通用模块
+      4 通用元件
+      5 通用响应式系统
+    -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+
+  <body>
+    <!-- 【m-】 的写法指的是mobile移动端 -->
+
+    <!-- m-header start -->
+    <header class="m-header">
+      <a href="#" class="logo"
+        ><img src="../images/logo@2x.png" alt="logo"
+      /></a>
+      <a href="#" class="search"
+        ><img src="../images/search@2x.png" alt="search"
+      /></a>
+      <a href="#" class="login"
+        ><img src="../images/login@2x.png" alt="login"
+      /></a>
+      <a href="#" class="download">下载 App</a>
+    </header>
+    <!-- end m-header -->
+
+    <!-- nav m-start -->
+    <nav class="m-nav">
+      <div class="swiper-container" id="swiper-nav">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#">首页</a></div>
+          <div class="swiper-slide"><a href="#">动画</a></div>
+          <div class="swiper-slide"><a href="#">番剧</a></div>
+          <div class="swiper-slide"><a href="#">国创</a></div>
+          <div class="swiper-slide"><a href="#">音乐</a></div>
+          <div class="swiper-slide"><a href="#">舞蹈</a></div>
+          <div class="swiper-slide"><a href="#">电视剧</a></div>
+          <div class="swiper-slide"><a href="#">影视</a></div>
+          <div class="swiper-slide"><a href="#">纪录片</a></div>
+          <div class="swiper-slide"><a href="#">游戏</a></div>
+          <div class="swiper-slide"><a href="#">知识</a></div>
+          <div class="swiper-slide"><a href="#">美食</a></div>
+          <div class="swiper-slide"><a href="#">科技</a></div>
+          <div class="swiper-slide"><a href="#">娱乐</a></div>
+          <div class="swiper-slide"><a href="#">直播</a></div>
+          <div class="swiper-slide"><a href="#">专栏</a></div>
+          <div class="swiper-slide"><a href="#">资讯</a></div>
+          <div class="swiper-slide"><a href="#">活动</a></div>
+          <div class="swiper-slide"><a href="#">课堂</a></div>
+        </div>
+      </div>
+    </nav>
+    <!-- end m-nav -->
+
+    <!-- m-main start -->
+    <main class="m-main">
+      <!-- m-banner start -->
+      <section class="m-banner">
+        <div class="swiper-container" id="swiper-banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="../images/banner-2@2x.png" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../images/banner-3@2x.png" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="../images/banner-1@2x.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- end m-banner -->
+
+      <!-- m-menu start -->
+      <section class="m-menu">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="../images/menu-01@2x.png" alt="" />
+              <p>番剧</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-02@2x.png" alt="" />
+              <p>游戏</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-03@2x.png" alt="" />
+              <p>新剧</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-04@2x.png" alt="" />
+              <p>生活</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-05@2x.png" alt="" />
+              <p>健康</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-06@2x.png" alt="" />
+              <p>喜剧</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-07@2x.png" alt="" />
+              <p>美食</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-08@2x.png" alt="" />
+              <p>科技</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-09@2x.png" alt="" />
+              <p>随记</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../images/menu-010@2x.png" alt="" />
+              <p>体育</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- end m-menu -->
+
+      <!-- m-recommend start -->
+      <section class="m-recommend">
+        <ul class="m-recommend-tab">
+          <li class="active">热门排行</li>
+          <li>最新热播</li>
+          <li>综合推荐</li>
+        </ul>
+
+        <div class="m-recommend-content">
+          <div class="m-recommend-list" style="display: block">
+            <div class="swiper-container" id="swiper-recommend1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- common-list start -->
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-01@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                  <!-- end common-list -->
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-02@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">
+                        【人类高质量CG】咏春宁次：
+                        笼中鸟心中拳。笼中鸟心中拳。笼中鸟心中拳。
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-03@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-04@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-05@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-06@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-recommend-list">
+            <div class="swiper-container" id="swiper-recommend2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- common-list start -->
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-06@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                  <!-- end common-list -->
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-05@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">
+                        【人类高质量CG】咏春宁次：
+                        笼中鸟心中拳。笼中鸟心中拳。笼中鸟心中拳。
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-04@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-03@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-02@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-01@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-recommend-list">
+            <div class="swiper-container" id="swiper-recommend3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- common-list start -->
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-01@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                  <!-- end common-list -->
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-02@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">
+                        【人类高质量CG】咏春宁次：
+                        笼中鸟心中拳。笼中鸟心中拳。笼中鸟心中拳。
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-03@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-04@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-05@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="common-list">
+                    <a href="#" class="common-list-view">
+                      <img src="../images/view-list-06@2x.png" alt="" />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>70.8万</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>11.5万</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href="#">透明手表。下集预告。</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end m-recommend -->
+
+      <!-- m-hot start -->
+      <section class="m-hot">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="m-hot-img">
+                <img src="../images/hot-01.png" alt="" />
+              </div>
+              <div class="m-hot-info">
+                <div class="title">自制战斗机式的打水仗摩托车</div>
+                <div class="desc">
+                  跟小朋友打水仗输了做了个战斗机准备一雪前耻
+                </div>
+              </div>
+              <div class="m-hot-play">
+                <img src="../images/playCircle@2x.png" alt="" />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="m-hot-img">
+                <img src="../images/hot-02.png" alt="" />
+              </div>
+              <div class="m-hot-info">
+                <div class="title">原 神 之 友 （第九期）</div>
+                <div class="desc">所有原神玩家都可以参加！会额外有一个满……</div>
+              </div>
+              <div class="m-hot-play">
+                <img src="../images/playCircle@2x.png" alt="" />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- end m-hot -->
+
+      <!-- m-focus start -->
+      <section class="m-focus">
+        <div class="m-focus-title">
+          <span>最近在看</span>
+          <a href="#">
+            查看全部
+            <img src="../images/arrow-right@2x.png" alt="" />
+          </a>
+        </div>
+
+        <div class="m-focus-content">
+          <div class="swiper-container" id="swiper-focus">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="focus-img">
+                    <img src="../images/focus-01@2x.png" alt="" />
+                  </div>
+                  <p class="m-focus-desc">番外 动态漫</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="focus-img">
+                    <img src="../images/focus-02@2x.png" alt="" />
+                  </div>
+                  <p class="m-focus-desc">这才是顶级的 气场</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="focus-img">
+                    <img src="../images/focus-03@2x.png" alt="" />
+                  </div>
+                  <p class="m-focus-desc">再飞行，带着 梦想再次的飞起</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="focus-img">
+                    <img src="../images/focus-01@2x.png" alt="" />
+                  </div>
+                  <p class="m-focus-desc">番外 动态漫</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="focus-img">
+                    <img src="../images/focus-02@2x.png" alt="" />
+                  </div>
+                  <p class="m-focus-desc">这才是顶级的 气场</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="">
+                  <div class="focus-img">
+                    <img src="../images/focus-03@2x.png" alt="" />
+                  </div>
+                  <p class="m-focus-desc">再飞行，带着 梦想再次的飞起</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end m-focus -->
+
+      <!-- m-view-list start -->
+      <section class="m-view-list">
+        <div class="m-view-list-wrapper">
+          <div class="common-list">
+            <a href="#" class="common-list-view">
+              <img src="../images/view-list-01@2x.png" alt="" />
+              <div class="mask">
+                <div class="common-list-play">
+                  <span class="icon-play"></span>
+                  <i>70.8万</i>
+                </div>
+                <div class="common-list-info">
+                  <span class="icon-info"></span>
+                  <i>11.5万</i>
+                </div>
+              </div>
+            </a>
+            <p class="common-list-title">
+              <a href="#">透明手表。下集预告。</a>
+            </p>
+          </div>
+          <div class="common-list">
+            <a href="#" class="common-list-view">
+              <img src="../images/view-list-02@2x.png" alt="" />
+              <div class="mask">
+                <div class="common-list-play">
+                  <span class="icon-play"></span>
+                  <i>190.4万</i>
+                </div>
+                <div class="common-list-info">
+                  <span class="icon-info"></span>
+                  <i>6160</i>
+                </div>
+              </div>
+            </a>
+            <p class="common-list-title">
+              <a href="#">这真的是碳基生物能吃的玩意 吗？？？</a>
+            </p>
+          </div>
+          <div class="common-list">
+            <a href="#" class="common-list-view">
+              <img src="../images/view-list-03@2x.png" alt="" />
+              <div class="mask">
+                <div class="common-list-play">
+                  <span class="icon-play"></span>
+                  <i>14万</i>
+                </div>
+                <div class="common-list-info">
+                  <span class="icon-info"></span>
+                  <i>4.5万</i>
+                </div>
+              </div>
+            </a>
+            <p class="common-list-title">
+              <a href="#">约 尔 蹦 迪 2.0，跳 极 乐 净 土！【咬人猫】</a>
+            </p>
+          </div>
+          <div class="common-list">
+            <a href="#" class="common-list-view">
+              <img src="../images/view-list-04@2x.png" alt="" />
+              <div class="mask">
+                <div class="common-list-play">
+                  <span class="icon-play"></span>
+                  <i>24.2万</i>
+                </div>
+                <div class="common-list-info">
+                  <span class="icon-info"></span>
+                  <i>3.6万</i>
+                </div>
+              </div>
+            </a>
+            <p class="common-list-title">
+              <a href="#"
+                >爽！边迷路边吃超辣美食的感 觉，只能在9D重庆体验到！</a
+              >
+            </p>
+          </div>
+          <div class="common-list">
+            <a href="#" class="common-list-view">
+              <img src="../images/view-list-05@2x.png" alt="" />
+              <div class="mask">
+                <div class="common-list-play">
+                  <span class="icon-play"></span>
+                  <i>70.8万</i>
+                </div>
+                <div class="common-list-info">
+                  <span class="icon-info"></span>
+                  <i>11.5万</i>
+                </div>
+              </div>
+            </a>
+            <p class="common-list-title">
+              <a href="#">透明手表。下集预告。</a>
+            </p>
+          </div>
+          <div class="common-list">
+            <a href="#" class="common-list-view">
+              <img src="../images/view-list-06@2x.png" alt="" />
+              <div class="mask">
+                <div class="common-list-play">
+                  <span class="icon-play"></span>
+                  <i>70.8万</i>
+                </div>
+                <div class="common-list-info">
+                  <span class="icon-info"></span>
+                  <i>11.5万</i>
+                </div>
+              </div>
+            </a>
+            <p class="common-list-title">
+              <a href="#">透明手表。下集预告。</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- end m-view-list -->
+    </main>
+    <!-- end m-main -->
+
+    <!-- tabbar start -->
+    <footer class="tabbar">
+      <ul>
+        <li class="active">
+          <a href="">
+            <img src="../images/home@2x.png" alt="" />
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="../images/new@2x.png" alt="" />
+            <p>动态</p>
+          </a>
+        </li>
+        <li class="upload">
+          <a href=""></a>
+        </li>
+        <li>
+          <a href="">
+            <img src="../images/bag@2x.png" alt="" />
+            <p class="vip"><i>会员购</i></p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="../images/tv@2x.png" alt="" />
+            <p>我的</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- end tabbar -->
+
+    <script>
+      // 假设把页面分成10份
+      function initPage() {
+        // 获取当前页的html元素
+        var html = document.documentElement;
+        // 获取可视宽（clientWidth）
+        var clientWidth = html.clientWidth;
+        // 动态修改html的字体大小
+        console.log(clientWidth / 10 + 'px');
+        html.style.fontSize = clientWidth / 10 + 'px';
+      }
+      initPage();
+      // 函数随页面大小而变化，即，实时。
+      window.onresize = initPage;
+    </script>
+
+    <script>
+      // 选项卡效果
+      var tab = document.querySelectorAll('.m-recommend-tab li');
+      var tabList = document.querySelectorAll(
+        '.m-recommend-content .m-recommend-list'
+      );
+      // 为提高性能，所以用var len = tab.length;替换直接使用 i < tab.length;
+      var len = tab.length;
+      for (let i = 0; i < len; i++) {
+        tab[i].index = i;
+        tab[i].onclick = function () {
+          for (let j = 0; j < len; j++) {
+            tab[j].classList.remove('active');
+            tabList[j].style.display = 'none';
+          }
+          this.classList.add('active');
+          tabList[this.index].style.display = 'block';
+
+          // 重新初始化swiper
+          // 否则swiper-recommend2,3都不能够被看见，
+          // 因为代码是从上往下执行的，他们那时候还是display：none。
+          // display：none 是不在dom渲染树上面的。
+
+          // ↓ 傻瓜式写法：
+          // 违背了不自我重复规则，所以不要这么写！
+          // new Swiper('#swiper-recommend2', {
+          //   slidesPerView: 2,
+          //   spaceBetween: 19,
+          // });
+          // new Swiper('#swiper-recommend3', {
+          //   slidesPerView: 2,
+          //   spaceBetween: 19,
+          // });
+
+          // 正确写法：
+          // this.index(如：i为0，我让它+1，那就变成#swiper-recommend1了，以此类推)
+          // this.index + 1 如果外面没有圆括号的话，他就变成字符串了，而我们需要的是数字。
+          // 即，不要11，要2。所以加个圆括号就好了。
+          new Swiper('#swiper-recommend' + (this.index + 1), {
+            slidesPerView: 2,
+            spaceBetween: 19,
+          });
+        };
+      }
+    </script>
+
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script>
+      var mySwiper1 = new Swiper('#swiper-nav', {
+        slidesPerView: 6.5,
+      });
+
+      var mySwiper2 = new Swiper('#swiper-banner', {
+        loop: true,
+        grabCursor: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+
+      var mySwiper3 = new Swiper('#swiper-recommend1', {
+        slidesPerView: 2,
+        spaceBetween: 19,
+      });
+
+      var mySwiper4 = new Swiper('#swiper-focus', {
+        slidesPerView: 4,
+        spaceBetween: 12,
+        loop: true,
+        slidesOffsetBefore: 40,
+      });
+    </script>
+  </body>
+</html>

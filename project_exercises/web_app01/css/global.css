@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  /* 去掉点击的高亮显示效果 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font: 12px / 1.5 Microsoft YaHei;
+  color: #101010;
+  background-color: #f5f5f5;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #101010;
+}
+
+img {
+  /* 图片默认都会有一点的距离，设置border之后可以明星看到，用下面这个方法后，空隙消失 */
+  vertical-align: top;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+i {
+  font-style: normal;
+}

@@ -1,0 +1,434 @@
+/* head start */
+.head {
+  width: 100%;
+  background-color: #0eb6ff;
+  padding: 7px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.head .position,
+.head .weixin {
+  display: block;
+  width: 43px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 20px;
+}
+.head .position {
+  float: left;
+  padding-left: 10px;
+}
+.head .weixin {
+  float: right;
+  padding-left: 12px;
+}
+.search {
+  margin: 0 43px;
+  height: 30px;
+  position: relative;
+}
+.search input {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding-left: 35px;
+}
+.search input::placeholder {
+  color: #9d9e9d;
+}
+.search .icon-search {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  font-size: 13px;
+  left: 10px;
+  top: 6px;
+}
+/* end start */
+
+/* main start */
+.menu {
+  padding: 44px 10px 17px;
+}
+.menu ul li {
+  width: 20%;
+  padding: 0 9px;
+  float: left;
+  margin-top: 16px;
+}
+.menu .menu-item-icon {
+  /* padding-bottom：100% 是相对于父元素的宽，即上面的width：20%； */
+  /* 所以在它里面什么都没有的情况下（图标），它就是一个正方形 */
+  padding-bottom: 100%;
+  background-color: rgb(223, 165, 241);
+  border-radius: 50%;
+  position: relative;
+}
+.menu .menu-item-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  color: #fff;
+}
+.menu .menu-item-title {
+  text-align: center;
+  line-height: 1;
+  padding-top: 10px;
+}
+/* end start */
+
+/* main start */
+/* cheap start */
+.main {
+  padding: 0 11px 50px;
+}
+.cheap {
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 1;
+  padding: 15px 14px 14px 12px;
+}
+.cheap .cheap-title > span {
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+}
+.cheap .cheap-title > a {
+  font-size: 12px;
+  float: right;
+}
+.icon-you:before {
+  content: '';
+}
+.icon-you::after {
+  content: '\e627';
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* cheap-content start */
+.cheap .cheap-content ul li {
+  float: left;
+  width: 33%;
+  padding: 15px 16px 15px 10px;
+}
+.cheap .cheap-content ul li a.img {
+  display: block;
+  /*
+  等比缩放
+  86是因为课件中的图片是 宽94*高81
+  然后 81/94 *100% = 86%
+  */
+  padding-bottom: 86.17%;
+  position: relative;
+}
+.cheap .cheap-content ul li img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cheap .cheap-content ul li .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 7px 0 4px;
+}
+.cheap .cheap-content ul li .price {
+  margin-top: 6px;
+  position: relative;
+}
+.cheap .cheap-content ul li .price span {
+  color: #ce5f41;
+}
+.cheap .cheap-content ul li .price .add {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  background-color: #0eb6ff;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+/* end cheap-content */
+/* end cheap */
+
+/* recommend start */
+.recommend {
+  padding-top: 10px;
+}
+.recommend .recommend-left,
+.recommend .recommend-right {
+  float: left;
+  width: 50%;
+}
+.recommend .recommend-left {
+  padding-right: 5px;
+}
+.recommend .recommend-right {
+  padding-left: 4px;
+}
+.recommend .recommend-content {
+  background-color: #fff;
+  padding-bottom: 12px;
+  border-radius: 5px;
+}
+.recommend .recommend-content .recommend-title {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 0 3px 13px;
+}
+.recommend .recommend-content .recommend-desc {
+  color: #9d9e9d;
+  padding: 0 0 4px 12px;
+}
+.recommend-content ul li {
+  width: 50%;
+  float: left;
+}
+.recommend-content ul li:nth-child(1) {
+  padding: 0 11px 0 14px;
+}
+.recommend-content ul li:nth-child(2) {
+  padding: 0 15px 0 10px;
+}
+/* 图片等比放大问题解决 */
+.recommend-content ul li a {
+  display: block;
+  padding-bottom: 100%;
+  position: relative;
+  /* 给它所在的a标签添加
+        display: block;
+        padding-bottom: 100%;
+        然后再给它加定位 */
+}
+.recommend-content ul li a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* 这里基本选择cover，但这次是我自己找的图片，过大，所以用了contain*/
+}
+/* 图片等比放大问题解决 */
+/* end recommend*/
+
+/* product-category start */
+.product-category {
+  margin-top: 19px;
+}
+.product-category .tab {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+.product-category .tab li {
+  width: 15%;
+  height: 50px;
+  text-align: center;
+}
+.product-category .tab li span {
+  display: block;
+  font-size: 16px;
+}
+.product-category .tab li i {
+  display: block;
+  padding: 0 5px;
+  color: #9d9e9d;
+  height: 17px;
+  line-height: 17px;
+  border-radius: 9px;
+}
+.product-category .tab li.active span {
+  color: #0eb6ff;
+}
+.product-category .tab li.active i {
+  color: #fff;
+  background-color: #0eb6ff;
+}
+/* end product-category */
+
+/* tab-content start */
+.tab-content ul li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.tab-content ul li .img {
+  width: 30%;
+  float: left;
+  position: relative;
+  padding-left: 9px;
+}
+/* 等比缩放问题解决 */
+.tab-content ul li .img a {
+  display: block;
+  padding-bottom: 100%;
+}
+.tab-content ul li .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tab-content ul li .info {
+  width: 70%;
+  float: right;
+  padding: 12px 14px;
+}
+.tab-content .info .info-title {
+  font-size: 14px;
+  height: 30px;
+}
+.tab-content .info .info-label {
+  margin-bottom: 10px;
+}
+.tab-content .info .info-label span,
+.tab-content .info .info-label i {
+  display: inline-block;
+  height: 18px;
+  line-height: 17px;
+  text-align: center;
+  border-radius: 4px;
+}
+.tab-content .info .info-label span {
+  width: 32px;
+  color: #ce5f41;
+  border: 1px solid #ce5f41;
+}
+.tab-content .info .info-label i {
+  width: 62px;
+  color: #9d9e9d;
+  border: 1px solid #9d9e9d;
+}
+.tab-content .info .info-price span {
+  color: #ce5f41;
+  float: left;
+}
+.tab-content .info .info-price a {
+  float: right;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  background-color: #0eb6ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+.tab-content .info .info-number {
+  color: #9d9e9d;
+  margin-top: 8px;
+}
+/* end tab-content */
+/* end product-category */
+/* end main */
+
+/* tab-bar start */
+.tab-bar {
+  width: 100%;
+
+  /* 为了解决iPhone往上拉的时候出现的footer的移动，
+  加入以下这行代码，即可解决 【方法②】 */
+  height: 50px;
+  /* height: calc(50px + env(safe-area-inset-bottom)) */
+
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+
+  /* 为了解决iPhone往上拉的时候出现的footer的移动，
+  加入以下这行代码，即可解决 【方法①】
+  ！!
+  但前提是不能实怪异盒模型，即box-sizing:border-box
+  因为元素自身高度会减少 */
+  padding-bottom: env(safe-area-inset-bottom);
+
+  /* 另外：
+  针对一些不是ios的手机，可以用以下代码实现：
+  @supports not (constant(safe-area-inset-bottom)){
+    .tab-bar{
+      padding-bottom: 30px;
+    }
+  }
+  */
+}
+
+.tab-bar ul {
+  display: flex;
+}
+
+.tab-bar ul li {
+  width: 25%;
+  text-align: center;
+  float: left;
+}
+
+.tab-bar ul li a span {
+  display: block;
+  padding-top: 4px;
+  font-size: 16px;
+}
+
+.tab-bar ul li i {
+  color: #9d9e9d;
+}
+
+.tab-bar ul li.active span,
+.tab-bar ul li.active i {
+  color: #0eb6ff;
+}
+/* end tab-bar */
+
+/* responsive */
+@media screen and (min-width: 500px) {
+  .menu .menu-item-title {
+    font-size: 16px;
+  }
+  .menu .menu-item-icon::before {
+    font-size: 45px;
+  }
+  .cheap .cheap-content ul li .title,
+  .cheap .cheap-content ul li .price {
+    font-size: 14px;
+  }
+  .cheap .cheap-content ul li .price .add {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+  .recommend .recommend-content .recommend-title {
+    font-size: 16px;
+  }
+  .recommend .recommend-content .recommend-desc {
+    font-size: 14px;
+  }
+  .tab-content .info .info-label {
+    margin-bottom: 20px;
+  }
+  .tab-content .info .info-title {
+    font-size: 18px;
+    height: 36px;
+  }
+}

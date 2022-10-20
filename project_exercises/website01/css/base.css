@@ -1,0 +1,20 @@
+.container {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+}
+.tac {
+  text-align: center;
+}
